@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'myFont';
+    src: url(./font/ZenKakuGothicAntique-Regular.ttf);
+}
+
+* {
+    font-family: 'myFont';
+}
+
+body {
+    margin: 0;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    font-size: 28px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
