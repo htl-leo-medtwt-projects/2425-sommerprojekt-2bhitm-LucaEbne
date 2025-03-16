@@ -21,6 +21,29 @@
         <a href="Unterseiten/japanese-basics.html">Japanese Basics</a>
     </div>
    </header>
+
+    <div class="container">
+        <div class="slideShowCover" onclick="openSlideshow('food')">
+            <h2>Japanese Dishes</h2>
+            <img src="img/FoodSlideshow/Ramen.avif" alt="Japanese Dishes">
+        </div>
+        <div class="slideShowCover" onclick="openSlideshow('places')">
+            <h2>Famous Places</h2>
+            <img src="img/FamousPlacesSlideshow/Mount-Fuji.jpg" alt="Famous Places">
+        </div>
+        <div class="slideShowCover" onclick="openSlideshow('events')">
+            <h2>Festival & Events</h2>
+            <img src="img/FestivalsSlideshow/FestivalCover.jpg" alt="Festival & Events">
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="slideshow" id="slideshow">
+            <span class="close-btn" onclick="closeSlideshow()">&times;</span>
+            <img class="nav-btn nav-left" id="imgArrow" src="img/pfeil.png" alt="Left" onclick="slideLeft()">
+            <img id="slideshow-image" src="" alt="Slideshow">
+            <img class="nav-btn nav-right" id="imgArrow" src="img/pfeil.png" alt="Right" onclick="slideRight()">
+    </div>
 </body>
 
 </html>
