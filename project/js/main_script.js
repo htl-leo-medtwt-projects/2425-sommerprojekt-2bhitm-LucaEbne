@@ -63,16 +63,35 @@ function createBlossom() {
 function endBlossom(){
     clearInterval(time);
 }
+function ModeSwitch() {
+    let lightModeIcon = document.getElementById("LightModeSwitch");
 
-function ModeSwitch(){
-    
-    if(darkMode){
+    if (darkMode) {
         root.style.setProperty('--background-color', 'white');
+        root.style.setProperty('--nav-text-color', 'white');
+        root.style.setProperty('--card-bg-color', '#fff');
+        root.style.setProperty('--card-text-color', '#d13b6b');
         darkMode = false;
-        headerBox.remove = `<div class="rectangle2"></div>`;
+
+        const rectangle = document.querySelector(".rectangle2");
+        if (rectangle) {
+            rectangle.remove();
+        }
+
+        lightModeIcon.src = "img/Moon_Icon.png";
     } else {
-        root.style.setProperty('--background-color', '#494949');
-        headerBox.innerHTML += `<div class="rectangle2"></div>`;
+        root.style.setProperty('--nav-text-color', '#a7a6a4');
+        root.style.setProperty('--background-color', '#2c2c2c'); 
+        root.style.setProperty('--card-bg-color', '#1d1d1d'); 
+        root.style.setProperty('--card-text-color', '#7f5e6c');
+
+        const rectangle = document.createElement("div");
+        rectangle.classList.add("rectangle2");
+        headerBox.appendChild(rectangle);
+
         darkMode = true;
+
+        lightModeIcon.src = "img/Sun.png"; 
     }
 }
+
