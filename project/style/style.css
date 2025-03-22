@@ -35,7 +35,7 @@ body{
 }
 .rectangle {
     position: absolute;
-    height: 99%;
+    height: 99.2%;
     width: 100%;
     background-color: #000000;
     top: 0%;
@@ -43,7 +43,7 @@ body{
 }
 .rectangle2{
     position: absolute;
-    height: 99%;
+    height: 99.2%;
     width: 100%;
     background-color: #000000;
     top: 0%;

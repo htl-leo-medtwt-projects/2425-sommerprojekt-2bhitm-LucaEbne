@@ -4,6 +4,7 @@ let slides = {
     events: ['./img/FestivalsSlideshow/Festival1.jpg', './img/FestivalsSlideshow/Festival2.jpg', './img/FestivalsSlideshow/Festival3.jpg']
 };
 let headerBox = document.getElementById('header1');
+let headerBoxSubpages = document.getElementById('header2');
 let root = document.querySelector(':root');
 let darkMode = false;
 let time;
@@ -63,7 +64,7 @@ function createBlossom() {
 function endBlossom(){
     clearInterval(time);
 }
-function ModeSwitch() {
+function ModeSwitchMain() {
     let lightModeIcon = document.getElementById("LightModeSwitch");
 
     if (darkMode) {
@@ -94,4 +95,34 @@ function ModeSwitch() {
         lightModeIcon.src = "img/Sun.png"; 
     }
 }
+function ModeSwitchSubPages() {
+    let lightModeIcon = document.getElementById("LightModeSwitch");
 
+    if (darkMode) {
+        root.style.setProperty('--background-color', 'white');
+        root.style.setProperty('--nav-text-color', 'white');
+        root.style.setProperty('--card-bg-color', '#fff');
+        root.style.setProperty('--card-text-color', '#d13b6b');
+        darkMode = false;
+
+        const rectangle = document.querySelector(".rectangle2");
+        if (rectangle) {
+            rectangle.remove();
+        }
+
+        lightModeIcon.src = "img/Moon_Icon.png";
+    } else {
+        root.style.setProperty('--nav-text-color', '#a7a6a4');
+        root.style.setProperty('--background-color', '#2c2c2c'); 
+        root.style.setProperty('--card-bg-color', '#1d1d1d'); 
+        root.style.setProperty('--card-text-color', '#7f5e6c');
+
+        const rectangle = document.createElement("div");
+        rectangle.classList.add("rectangle2");
+        headerBoxSubpages.appendChild(rectangle);
+
+        darkMode = true;
+
+        lightModeIcon.src = "../img/Sun.png"; 
+    }
+}
