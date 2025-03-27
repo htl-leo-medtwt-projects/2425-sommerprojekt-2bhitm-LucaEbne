@@ -22,6 +22,19 @@
         <a href="japanese-basics.html">Japanese Basics</a>
     </div>
    </header>
+   <div class="container">
+    <div class="image-container" onclick="showInfo()">
+        <img src="/project/img/Kinkakuji-Tempel.webp" alt="Kinkakuji Tempel">
+        <div class="info-box" id="infoBox">
+            <h2>Kinkakuji</h2>
+            <p>Ein Tempel, der mit Gold überzogen ist.</p>
+            <button onclick="showMap(event)">Open in Maps</button>
+        </div>
+    </div>
+    <div class="map-container" id="mapContainer">
+        <iframe src="https://www.google.com/maps?q=Kinkakuji&output=embed"></iframe>
+    </div>
+</div>
 </body>
 
 </html>

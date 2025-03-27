@@ -110,7 +110,7 @@ function ModeSwitchSubPages() {
             rectangle.remove();
         }
 
-        lightModeIcon.src = "img/Moon_Icon.png";
+        lightModeIcon.src = "../img/Moon_Icon.png";
     } else {
         root.style.setProperty('--nav-text-color', '#a7a6a4');
         root.style.setProperty('--background-color', '#2c2c2c'); 
@@ -125,4 +125,14 @@ function ModeSwitchSubPages() {
 
         lightModeIcon.src = "../img/Sun.png"; 
     }
+}
+function showInfo() {
+    let infoBox = document.getElementById("infoBox");
+    infoBox.style.display = "block";
+}
+
+function showMap(event) {
+    event.stopPropagation(); 
+    let mapContainer = document.getElementById("mapContainer");
+    mapContainer.style.display = "block";
 }
