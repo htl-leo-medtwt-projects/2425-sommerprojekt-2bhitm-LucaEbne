@@ -127,12 +127,23 @@ function ModeSwitchSubPages() {
     }
 }
 function showInfo() {
-    let infoBox = document.getElementById("infoBox");
-    infoBox.style.display = "block";
+        let infoBox = document.getElementById("infoBox");
+        infoBox.style.display = "block";
+        let openMap = document.getElementById("MapsOpen")
+        openMap.style.display = "block";
 }
 
-function showMap(event) {
-    event.stopPropagation(); 
+function showMap() {
+    let openMap = document.getElementById("MapsOpen")
+    openMap.style.display = "none";
     let mapContainer = document.getElementById("mapContainer");
     mapContainer.style.display = "block";
+    let closeMap = document.getElementById("MapsClose")
+    closeMap.style.display = "block";
+}
+function closeMap() {
+    let mapContainer = document.getElementById("mapContainer");
+    mapContainer.style.display = "none";
+    let closeMap = document.getElementById("MapsClose")
+    closeMap.style.display = "none";
 }
