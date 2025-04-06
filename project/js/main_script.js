@@ -127,23 +127,33 @@ function ModeSwitchSubPages() {
     }
 }
 function showInfo() {
-        let infoBox = document.getElementById("infoBox");
-        infoBox.style.display = "block";
-        let openMap = document.getElementById("MapsOpen")
-        openMap.style.display = "block";
+    let infoBox = document.getElementById("infoBox");
+    infoBox.style.display = "block";
 }
 
 function showMap() {
     let openMap = document.getElementById("MapsOpen")
-    openMap.style.display = "none";
     let mapContainer = document.getElementById("mapContainer");
-    mapContainer.style.display = "block";
     let closeMap = document.getElementById("MapsClose")
+    let closeMap2 = document.getElementById("MapsClose2")
+    
     closeMap.style.display = "block";
+    closeMap2.style.display = "none";
+    openMap.style.display = "none";
+    mapContainer.style.display = "block";
 }
 function closeMap() {
     let mapContainer = document.getElementById("mapContainer");
-    mapContainer.style.display = "none";
+    let openMap = document.getElementById("MapsOpen")
     let closeMap = document.getElementById("MapsClose")
+    let closeMap2 = document.getElementById("MapsClose2")
+
+    openMap.style.display = "block";
+    closeMap2.style.display = "block";
+    mapContainer.style.display = "none";
     closeMap.style.display = "none";
+}
+function closeMap2() {
+    let infoBox = document.getElementById("infoBox");
+    infoBox.style.display = "none";
 }

@@ -1,41 +1,267 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Japan Tourguide</title>
     <script src="../js/main_script.js" defer></script>
-    <link rel="stylesheet" href="../style/style.css">
-</head>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
 
-<body>
-   <header id="header2">
-    <img id="cover2" src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg" alt="">
-    <div class="rectangle"></div>
-    <div class="headerText"><p>Sights in<br>Japan</p></div>
-    <a href="../index.html"><img id="HomeButton" src="../img/Home.png" alt=""></a>
-    <img onclick="ModeSwitchSubPages()" id="LightModeSwitch" src="../img/Moon_Icon.png" alt="">
-    <div class="navbar">
+  <body>
+    <header id="header2">
+      <img
+        id="cover2"
+        src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg"
+        alt=""
+      />
+      <div class="rectangle"></div>
+      <div class="headerText">
+        <p>Sights in<br />Japan</p>
+      </div>
+      <a href="../index.html"
+        ><img id="HomeButton" src="../img/Home.png" alt=""
+      /></a>
+      <img
+        onclick="ModeSwitchSubPages()"
+        id="LightModeSwitch"
+        src="../img/Moon_Icon.png"
+        alt=""
+      />
+      <div class="navbar">
         <a id="sightNav" href="sights.html">Sights</a>
         <a href="restaurants.html">Restaurants</a>
         <a href="japanese-basics.html">Japanese Basics</a>
-    </div>
-   </header>
-   <div class="container">
-    <div class="image-container" onclick="showInfo()">
-        <img src="/project/img/Kinkakuji-Tempel.webp" alt="Kinkakuji Tempel">
-        <div class="info-box" id="infoBox">
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/Kinkakuji-Tempel.webp" alt="Kinkakuji Tempel" />
+          <div class="info-box" id="infoBox">
             <h2>Kinkakuji</h2>
             <p>Ein Tempel, der mit Gold überzogen ist.</p>
             <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
             <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
         </div>
+          <div class="map-container" id="mapContainer">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!4v1743587641573!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHMzYlM2eVFF!2m2!1d35.03936978736039!2d135.7292444073969!3f350.11966236043895!4f-6.39200957607882!5f0.7820865974627469"
+              width="700"
+              height="550"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/FamousPlacesSlideshow/FamousPlace3.jpg" alt="Fushimi Inari Taisha" />
+          <div class="info-box" id="infoBox">
+            <h2>Fushimi Inari Taisha</h2>
+            <p>Berühmt für seine tausenden roten Torii-Tore.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13057.391139756584!2d135.768152!3d34.967146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ce373ac3ed%3A0x50f20440d85db0ec!2sFushimi%20Inari-Taisha!5e0!3m2!1sde!2sjp!4v1743588237904"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg" alt="Tokyo Tower" />
+          <div class="info-box" id="infoBox">
+            <h2>Tokyo Tower</h2>
+            <p>Ein ikonischer Funkturm mit Aussichtsplattformen.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0054465141733!2d139.743244!3d35.658580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf0efb5d6d3%3A0xa02ed9b2dc9f8b2b!2sTokyo%20Tower!5e0!3m2!1sde!2sjp!4v1743588362483"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/Bambuswald.jpg" alt="Arashiyama Bambuswald" />
+          <div class="info-box" id="infoBox">
+            <h2>Arashiyama</h2>
+            <p>Ein magischer Bambuswald in Kyoto.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13051.502399025265!2d135.668422!3d35.009459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f8a8c4097fd%3A0x1c1e0294fdc1472e!2sArashiyama%20Bamboo%20Grove!5e0!3m2!1sde!2sjp!4v1743588432561"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/itsukushima.webp" alt="Itsukushima-Schrein" />
+          <div class="info-box" id="infoBox">
+            <h2>Itsukushima-Schrein</h2>
+            <p>Berühmt für das „schwimmende“ Torii im Wasser.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.632726799955!2d132.319349!3d34.295520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa21294bd6a05%3A0x3e08e1cf52f2b54e!2sItsukushima%20Shrine!5e0!3m2!1sde!2sjp!4v1743588483583"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/himeji-castle.jpg" alt="Himeji Castle" />
+          <div class="info-box" id="infoBox">
+            <h2>Himeji Castle</h2>
+            <p>
+              Das schönste erhaltene Schloss Japans, auch „Weißer Reiher“
+              genannt.
+            </p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.144300925707!2d134.691670!3d34.839442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554e53d0cf31d1b%3A0x1f5c36d44a8b1f7c!2sHimeji%20Castle!5e0!3m2!1sde!2sjp!4v1743588528523"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/japan-tokyo-shibuya-kreuzung-shibuya-sky-nachts.jpg" alt="Shibuya Kreuzung" />
+          <div class="info-box" id="infoBox">
+            <h2>Shibuya Kreuzung</h2>
+            <p>Eine der berühmtesten Kreuzungen der Welt in Tokio.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4601628408207!2d139.698382!3d35.659494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca4ed77a60f%3A0x9b8c706dcce0ba4d!2sShibuya%20Crossing!5e0!3m2!1sde!2sjp!4v1743588580921"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/naran-park.jpg" alt="Nara Park" />
+          <div class="info-box" id="infoBox">
+            <h2>Nara Park</h2>
+            <p>
+              Ein Park mit frei herumlaufenden Rehen und historischen Tempeln.
+            </p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13049.721858464292!2d135.836058!3d34.685087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013a79829aa359%3A0xf63e7ed36aa90bf6!2sNara%20Park!5e0!3m2!1sde!2sjp!4v1743588632709"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/FamousPlacesSlideshow/Mount-Fuji.jpg" alt="Mount Fuji" />
+          <div class="info-box" id="infoBox">
+            <h2>Mount Fuji</h2>
+            <p>Japans höchster Berg und Symbol des Landes.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51945.27287011346!2d138.708376!3d35.360638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601967e92c62119b%3A0x1f11d03bbf3ccdb4!2sMount%20Fuji!5e0!3m2!1sde!2sjp!4v1743588683107"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div class="image-container" onclick="showInfo()">
+          <img src="../img/SIghtsOrdner/oaska-castle.jpg" alt="Osaka Castle" />
+          <div class="info-box" id="infoBox">
+            <h2>Osaka Castle</h2>
+            <p>Ein prachtvolles Schloss mit reicher Geschichte in Osaka.</p>
+            <div id="MapsOpen" onclick="showMap()">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap()">Back</div>
+            <div id="MapsClose2" onclick="closeMap2()">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.528607344996!2d135.525255!3d34.687316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d22528b9ff%3A0x1e6d457f0c2ad66!2sOsaka%20Castle!5e0!3m2!1sde!2sjp!4v1743588738122"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </div>
-    <div class="map-container" id="mapContainer">
-        <iframe src="https://www.google.com/maps?q=Kinkakuji&output=embed"></iframe>
-    </div>
-</div>
-</body>
-
+  </body>
 </html>
