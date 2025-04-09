@@ -126,6 +126,38 @@ function ModeSwitchSubPages() {
         lightModeIcon.src = "../img/Sun.png"; 
     }
 }
+function moveIndicator(el) {
+    let indicator = document.getElementById("navIndicator");
+    let left = el.offsetLeft;
+    let width = el.offsetWidth;
+
+    setTimeout(() => {
+        indicator.style.left = `${left}px`;
+        indicator.style.width = `${width}px`;
+    }, 150);
+}
+
+function setupNavIndicator() {
+    let links = document.querySelectorAll(".navbar a");
+
+    links.forEach(link => {
+        link.addEventListener("click", (e) => {
+            links.forEach(l => l.classList.remove("active"));
+            e.target.classList.add("active");
+            moveIndicator(e.target);
+        });
+    });
+
+    let activeLink = document.querySelector(".navbar a.active");
+    if (activeLink) {
+        moveIndicator(activeLink);
+    }
+}
+
+
+
+setupNavIndicator();
+
 function showInfo(event) {
     let container = event.currentTarget;
     let infoBox = container.querySelector(".info-box");

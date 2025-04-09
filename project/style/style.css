@@ -73,21 +73,35 @@ body {
 }
 .navbar {
   position: absolute;
-  display: flex;
-  padding: 15px 0;
-  top: 1%;
+  top: 4%;
   left: 50%;
-  transform: translate(-50%);
-  align-items: center;
+  transform: translateX(-50%);
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 10;
 }
+
 .navbar a {
   text-decoration: none;
   color: var(--nav-text-color);
   font-size: 1.5em;
-  margin: 0 20px;
-  z-index: 5;
+  position: relative;
+  z-index: 2;
 }
+
+.nav-indicator {
+  position: absolute;
+  top: 0; /* <-- this makes it show above the text */
+  height: 3px;
+  background-color: #ff4698;
+  z-index: 5;
+  transition: all 0.3s ease;
+  width: 0;
+  left: 0;
+}
+
 #sightNav {
   border-top: #ff4698 3px solid;
   transform: translateY(25%);
