@@ -126,34 +126,52 @@ function ModeSwitchSubPages() {
         lightModeIcon.src = "../img/Sun.png"; 
     }
 }
-function showInfo() {
-    let infoBox = document.getElementById("infoBox");
+function showInfo(event) {
+    let container = event.currentTarget;
+    let infoBox = container.querySelector(".info-box");
     infoBox.style.display = "block";
 }
 
-function showMap() {
-    let openMap = document.getElementById("MapsOpen")
-    let mapContainer = document.getElementById("mapContainer");
-    let closeMap = document.getElementById("MapsClose")
-    let closeMap2 = document.getElementById("MapsClose2")
-    
+function showMap(event) {
+    let infoBox = event.currentTarget.closest(".info-box");
+    let mapContainer = infoBox.parentElement.nextElementSibling;
+
+    let openMap = infoBox.querySelector("#MapsOpen");
+    let closeMap = infoBox.querySelector("#MapsClose");
+    let closeMap2 = infoBox.querySelector("#MapsClose2");
+
     closeMap.style.display = "block";
     closeMap2.style.display = "none";
     openMap.style.display = "none";
     mapContainer.style.display = "block";
 }
-function closeMap() {
-    let mapContainer = document.getElementById("mapContainer");
-    let openMap = document.getElementById("MapsOpen")
-    let closeMap = document.getElementById("MapsClose")
-    let closeMap2 = document.getElementById("MapsClose2")
+
+function closeMap(event) {
+    let infoBox = event.currentTarget.closest(".info-box");
+    let mapContainer = infoBox.parentElement.nextElementSibling;
+
+    let openMap = infoBox.querySelector("#MapsOpen");
+    let closeMap = infoBox.querySelector("#MapsClose");
+    let closeMap2 = infoBox.querySelector("#MapsClose2");
 
     openMap.style.display = "block";
     closeMap2.style.display = "block";
     mapContainer.style.display = "none";
     closeMap.style.display = "none";
 }
-function closeMap2() {
-    let infoBox = document.getElementById("infoBox");
+
+function closeMap2(event) {
+    let infoBox = event.currentTarget.closest(".info-box");
+    let mapContainer = infoBox.parentElement.nextElementSibling;
+    let openMap = infoBox.querySelector("#MapsOpen");
+    let closeMap = infoBox.querySelector("#MapsClose");
+    let closeMap2 = infoBox.querySelector("#MapsClose2");
+
+    document.getElementById("infoBox").style.display = "none";
     infoBox.style.display = "none";
+    mapContainer.style.display = "none";
+    openMap.style.display = "none";
+    closeMap.style.display = "none";
+    closeMap2.style.display = "none";
 }
+
