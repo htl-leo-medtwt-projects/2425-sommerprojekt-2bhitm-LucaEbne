@@ -93,7 +93,7 @@ body {
 
 .nav-indicator {
   position: absolute;
-  top: 0; /* <-- this makes it show above the text */
+  top: 0; 
   height: 3px;
   background-color: #ff4698;
   z-index: 5;
@@ -309,44 +309,21 @@ body {
   border: none;
   border-radius: 10px;
 }
-/* From Uiverse.io by Santosh-DJ */
 
-.scroller {
-  content: "";
-  width: 15px;
-  height: 135px;
-  opacity: 0.4;
-  background: #888;
-  position: absolute;
-  top: 5px;
-  right: -17px;
-  border: 0.5px solid rgba(0, 0, 0, 0.04);
-  border-radius: 7px;
+
+
+/* Sights Unterseite */
+#rating{
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
-.indicator {
-  content: "";
-  width: 10px;
-  height: 28px;
-  background: #ffa500;
-  position: absolute;
-  top: 8px;
-  right: -15px;
-  z-index: 9;
-  border: 0.5px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
-  border-radius: 7px;
-  transition: all 0.2s ease-out;
+.flexDesignRating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.flexDesignRating img{
 
-.tab--1:checked ~ .indicator {
-  top: 8px;
-}
-
-.tab--2:checked ~ .indicator {
-  top: calc(28px * 2 + 2px);
-}
-
-.tab--3:checked ~ .indicator {
-  top: calc(26.5px * 4 + 1px);
+  transform: scale(0.5);
 }

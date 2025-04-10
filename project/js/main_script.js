@@ -162,7 +162,7 @@ function showInfo(event) {
     let container = event.currentTarget;
     let infoBox = container.querySelector(".info-box");
     infoBox.style.display = "block";
-}
+}6
 
 function showMap(event) {
     let infoBox = event.currentTarget.closest(".info-box");
