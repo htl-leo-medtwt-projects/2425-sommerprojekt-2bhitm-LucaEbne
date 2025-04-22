@@ -93,7 +93,7 @@ body {
 
 .nav-indicator {
   position: absolute;
-  top: 0; 
+  top: 0;
   height: 3px;
   background-color: #ff4698;
   z-index: 5;
@@ -221,23 +221,14 @@ body {
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  margin-top: 50px;
-}
-
-.sight-row {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: flex-start;
-  justify-content: center;
-  width: 90%;
+  margin-top: 3.1em;
 }
 
 .image-container {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0.6em;
   overflow: hidden;
 }
 
@@ -258,10 +249,11 @@ body {
   width: 95%;
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 10px;
+  padding: 0.6em;
   display: none;
   transition: opacity 0.3s;
 }
+
 .info-box {
   display: none;
 }
@@ -269,24 +261,27 @@ body {
 .map-container {
   display: none;
 }
+
 #MapsOpen,
 #MapsClose,
 #MapsClose2 {
   display: block;
-  margin-top: 10px;
-  padding: 12px 20px;
+  margin-top: 0.6em;
+  padding: 0.75em 1.25em;
   background: linear-gradient(to right, #f500a3, #ececec);
   color: white;
   border: none;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 1.9em;
   transition: background 0.3s, transform 0.2s;
 }
+
 #MapsClose {
   display: none;
 }
+
 #MapsClose2 {
   display: block;
 }
@@ -299,31 +294,141 @@ body {
 }
 
 #mapContainer {
-  margin-top: 10px;
+  margin-top: 0.6em;
   display: none;
 }
 
 #mapContainer iframe {
-  width: 400px;
-  height: 260px;
+  width: 25em;
+  height: 16.25em;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6em;
 }
 
-
-
-/* Sights Unterseite */
-#rating{
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
+.sight-row {
+  display: flex;
+  gap: 1.9em;
+  align-items: start;
+  justify-content: center;
+  width: 90%;
 }
-.flexDesignRating{
+
+#rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  border-radius: 1.25em;
+  box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
+  width: 20%;
+  max-width: 50%;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+.flexDesignRating {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.flexDesignRating img {
+  width: 1.9em;
+  height: auto;
+  transform: none;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.1em auto;
+  padding: 1.25em;
+  max-width: 50em;
+  border-radius: 1.25em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+.quiz-mode-selector {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.25em;
+  margin-bottom: 1.875em;
 }
-.flexDesignRating img{
+#quiz-mode-selector-hidden {
+  display: flex;
+}
+.quiz-mode-selector .quiz-mode-box {
+  margin: 0.6em;
+  padding: 0.9em 1.8em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 1.5em;
+  background: #e7acd4;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-  transform: scale(0.5);
+.quiz-mode-selector .quiz-mode-box:hover {
+  transform: scale(1.05);
+}
+
+.quiz-box {
+  margin-top: 1.875em;
+  text-align: center;
+}
+
+#quiz-question {
+  font-size: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.quiz-option-box {
+  padding: 0.9375em 1.25em;
+  margin: 0.625em auto;
+  font-size: 1.2em;
+  background-color: #f3d4e3;
+  color: #2c2c2c;
+  border-radius: 0.75em;
+  width: 60%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.quiz-option-box:hover {
+  background-color: #ffd6ea;
+  transform: scale(1.02);
+}
+
+
+#audio-player {
+  margin-top: 1em;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#audio-question {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+#audio-input {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #ffe3f4;
+  border-radius: 8px;
+  margin: 1em 0;
+  transition: 0.3s;
+}
+
+#audio-input:focus {
+  border-color: #e7a4e4;
+  outline: none;
 }

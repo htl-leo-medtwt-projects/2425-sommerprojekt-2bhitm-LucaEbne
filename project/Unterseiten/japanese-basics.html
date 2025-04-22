@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Japan Tourguide</title>
     <script src="../js/main_script.js" defer></script>
-    <link rel="stylesheet" href="../style/style.css">
-</head>
+    <script src="../js/japanes-basics.js"></script>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
 
-<body>
-   <header id="header2">
-    <img id="cover2" src="../img/JapaneseBasicsCover.jpg" alt="">
-    <div class="rectangle"></div>
-    <div class="headerText"><p>Japanese<br>Basics</p></div>
-    <a href="../index.html"><img id="HomeButton" src="../img/Home.png" alt=""></a>
-    <img onclick="ModeSwitchSubPages()" id="LightModeSwitch" src="../img/Moon_Icon.png" alt="">
-    <div class="navbar">
+  <body>
+    <header id="header2">
+      <img id="cover2" src="../img/JapaneseBasicsCover.jpg" alt="" />
+      <div class="rectangle"></div>
+      <div class="headerText">
+        <p>Japanese<br />Basics</p>
+      </div>
+      <a href="../index.html"
+        ><img id="HomeButton" src="../img/Home.png" alt=""
+      /></a>
+      <img
+        onclick="ModeSwitchSubPages()"
+        id="LightModeSwitch"
+        src="../img/Moon_Icon.png"
+        alt=""
+      />
+      <div class="navbar">
         <a href="sights.html">Sights</a>
         <a href="restaurants.html">Restaurants</a>
         <a href="japanese-basics.html" class="active">Japanese Basics</a>
         <div class="nav-indicator" id="navIndicator"></div>
       </div>
-   </header>
-</body>
+    </header>
+    <div class="quiz-container">
+      <div class="quiz-mode-selector" id="quiz-mode-selector-hidden">
+        <div class="quiz-mode-box" onclick="startQuiz('vocab')">
+          Vokabeln üben
+        </div>
+        <div class="quiz-mode-box" onclick="startQuiz('text')">
+          Lückentext üben
+        </div>
+        <div class="quiz-mode-box" onclick="startQuiz('audio')">Audio üben</div>
 
+      </div>
+
+      <div id="quiz-box" class="quiz-box" style="display: none">
+        <div id="quiz-question"></div>
+        <div id="quiz-options"></div>
+      </div>
+    </div>
+  </body>
 </html>
