@@ -3,8 +3,6 @@
   --nav-text-color: white;
   --card-bg-color: #fff;
   --card-text-color: #d13b6b;
-  --box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
-  --rating-background-color: #fff;
 }
 @font-face {
   font-family: "myFont";
@@ -320,8 +318,7 @@ body {
   flex-direction: column;
   gap: 0.6em;
   border-radius: 1.25em;
-  box-shadow: var(--box-shadow);
-  background-color: var(--rating-background-color);
+  box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
   width: 20%;
   max-width: 50%;
   margin-top: 2%;
@@ -333,8 +330,7 @@ body {
   flex-direction: column;
   gap: 0.6em;
   border-radius: 1.25em;
-  box-shadow:var(--box-shadow);
-  background-color: var(--rating-background-color);
+  box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
   width: 20%;
   max-width: 50%;
   margin-top: 2%;
@@ -350,7 +346,7 @@ body {
   font-size: 1.1em;
   font-weight: bold;
   margin: 0;
-  color: #000000;
+  color: #333;
 }
 
 .mustSeeText ul {
@@ -361,7 +357,7 @@ body {
   list-style: none;
   margin-bottom: 0.4em;
   font-size: 1em;
-  color: #000000;
+  color: #555;
   position: relative;
   padding-left: 0.5em;
 }
