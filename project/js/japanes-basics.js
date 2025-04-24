@@ -30,24 +30,24 @@ const textQuestions = [
 
 const audioQuestions = [
   {
-    question: "Was heißt ... auf Japanisch?",
+    question: "Was heißt ... auf Deutsch?",
     audio: "../audio/house.mp3",
-    answer: "ie",
+    answer: "Haus",
   },
   {
-    question: "Was heißt ... auf Japanisch?",
-    audio: "audio/dog.mp3",
-    answer: "inu",
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/dog.mp3",
+    answer: "Hund",
   },
   {
-    question: "Was heißt ... auf Japanisch?",
+    question: "Was heißt ... auf Deutsch?",
     audio: "../audio/cat.mp3",
-    answer: "neko",
+    answer: "Katze",
   },
   {
-    question: "Was heißt ... auf Japanisch?",
+    question: "Was heißt ... auf Deutsch?",
     audio: "../audio/car.mp3",
-    answer: "kuruma",
+    answer: "Auto",
   },
 ];
 
