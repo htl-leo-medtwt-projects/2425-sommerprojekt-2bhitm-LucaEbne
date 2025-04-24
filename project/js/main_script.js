@@ -184,6 +184,7 @@ function showInfo(event) {
 function showMap(event) {
   let infoBox = event.currentTarget.closest(".info-box");
   let mapContainer = infoBox.parentElement.nextElementSibling;
+  let map = document.getElementById("mustSeePlace");
 
   let openMap = infoBox.querySelector("#MapsOpen");
   let closeMap = infoBox.querySelector("#MapsClose");
@@ -193,12 +194,14 @@ function showMap(event) {
   closeMap2.style.display = "none";
   openMap.style.display = "none";
   mapContainer.style.display = "block";
+  map.style.display = "none";
 }
 
 function closeMap(event) {
   let infoBox = event.currentTarget.closest(".info-box");
   let mapContainer = infoBox.parentElement.nextElementSibling;
 
+  let map = document.getElementById("mustSeePlace");
   let openMap = infoBox.querySelector("#MapsOpen");
   let closeMap = infoBox.querySelector("#MapsClose");
   let closeMap2 = infoBox.querySelector("#MapsClose2");
@@ -207,6 +210,7 @@ function closeMap(event) {
   closeMap2.style.display = "block";
   mapContainer.style.display = "none";
   closeMap.style.display = "none";
+  map.style.display = "block";
 }
 
 function closeMap2(event) {
