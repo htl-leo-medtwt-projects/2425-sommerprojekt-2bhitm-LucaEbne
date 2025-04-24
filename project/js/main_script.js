@@ -121,6 +121,7 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--nav-text-color", "white");
     root.style.setProperty("--card-bg-color", "#fff");
     root.style.setProperty("--card-text-color", "#d13b6b");
+    root.style.setProperty("--rating-background-color", "#fff")
     darkMode = false;
 
     const rectangle = document.querySelector(".rectangle2");
@@ -134,6 +135,8 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--background-color", "#2c2c2c");
     root.style.setProperty("--card-bg-color", "#1d1d1d");
     root.style.setProperty("--card-text-color", "#7f5e6c");
+    root.style.setProperty("--rating-background-color", "#7f5e6c")
+
 
     const rectangle = document.createElement("div");
     rectangle.classList.add("rectangle2");
@@ -184,6 +187,7 @@ function showInfo(event) {
 function showMap(event) {
   let infoBox = event.currentTarget.closest(".info-box");
   let mapContainer = infoBox.parentElement.nextElementSibling;
+  let map = document.getElementById("mustSeePlace");
 
   let openMap = infoBox.querySelector("#MapsOpen");
   let closeMap = infoBox.querySelector("#MapsClose");
@@ -193,12 +197,14 @@ function showMap(event) {
   closeMap2.style.display = "none";
   openMap.style.display = "none";
   mapContainer.style.display = "block";
+  map.style.display = "none";
 }
 
 function closeMap(event) {
   let infoBox = event.currentTarget.closest(".info-box");
   let mapContainer = infoBox.parentElement.nextElementSibling;
 
+  let map = document.getElementById("mustSeePlace");
   let openMap = infoBox.querySelector("#MapsOpen");
   let closeMap = infoBox.querySelector("#MapsClose");
   let closeMap2 = infoBox.querySelector("#MapsClose2");
@@ -207,6 +213,7 @@ function closeMap(event) {
   closeMap2.style.display = "block";
   mapContainer.style.display = "none";
   closeMap.style.display = "none";
+  map.style.display = "block";
 }
 
 function closeMap2(event) {
