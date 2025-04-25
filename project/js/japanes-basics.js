@@ -1,4 +1,4 @@
-const vocabQuestions = [
+const vocabQuestionsK1 = [
   {
     question: "Was heißt 'Wasser' auf Japanisch?",
     options: ["hi", "mizu", "ki", "kin"],
@@ -18,6 +18,50 @@ const vocabQuestions = [
     question: "Was heißt 'Berg' auf Japanisch?",
     options: ["yama", "kawa", "mori", "sakura"],
     answer: "yama",
+  },
+];
+const vocabQuestionsK2 = [
+  {
+    question: "Was heißt 'Haus' auf Japanisch?",
+    options: ["ie","apāto", "yane", "kin"],
+    answer: "ie",
+  },
+  {
+    question: "Was heißt 'Katze' auf Japanisch?",
+    options: ["ahiru", "inu", "neko", "raion"],
+    answer: "neko",
+  },
+  {
+    question: "Was heißt 'Hund' auf Japanisch?",
+    options: ["zebura", "pantsu", "mori", "inu"],
+    answer: "inu",
+  },
+  {
+    question: "Was heißt 'Auto' auf Japanisch?",
+    options: ["yane", "kuruma", "raion", "sakura"],
+    answer: "kuruma",
+  },
+];
+const vocabQuestionsK3 = [
+  {
+    question: "Was heißt 'Hallo' auf Japanisch?",
+    options: ["moshi-moshi","irasshaimase", "konnichiwa", "yahhoo"],
+    answer: "konnichiwae",
+  },
+  {
+    question: "Was heißt 'Auf Wiedersehen' auf Japanisch?",
+    options: ["mata ashita", "ja nee", "mata ne", "sayōnara"],
+    answer: "sayōnara",
+  },
+  {
+    question: "Was heißt 'Danke' auf Japanisch?",
+    options: ["arigato", "pantsu", "fune", "dōmo"],
+    answer: "arigato",
+  },
+  {
+    question: "Was heißt 'Auto' auf Japanisch?",
+    options: ["yane", "kuruma", "raion", "sakura"],
+    answer: "kuruma",
   },
 ];
 
@@ -63,7 +107,7 @@ function startQuiz(type) {
   currentIndexQuiz = 0;
   wrongAnswers = [];
   if (type === "vocab") {
-    currentQuiz = [...vocabQuestions];
+    currentQuiz = [...vocabQuestionsK1];
   } else if (type === "text") {
     currentQuiz = [...textQuestions];
   } else if (type === "audio") {
