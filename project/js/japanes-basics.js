@@ -1,4 +1,4 @@
-const vocabQuestionsK1 = [
+let vocabQuestionsK1 = [
   {
     question: "Was heißt 'Wasser' auf Japanisch?",
     options: ["hi", "mizu", "ki", "kin"],
@@ -20,7 +20,7 @@ const vocabQuestionsK1 = [
     answer: "yama",
   },
 ];
-const vocabQuestionsK2 = [
+let vocabQuestionsK2 = [
   {
     question: "Was heißt 'Haus' auf Japanisch?",
     options: ["ie","apāto", "yane", "kin"],
@@ -42,16 +42,16 @@ const vocabQuestionsK2 = [
     answer: "kuruma",
   },
 ];
-const vocabQuestionsK3 = [
+let vocabQuestionsK3 = [
   {
     question: "Was heißt 'Hallo' auf Japanisch?",
     options: ["moshi-moshi","irasshaimase", "konnichiwa", "yahhoo"],
-    answer: "konnichiwae",
+    answer: "konnichiwa",
   },
   {
     question: "Was heißt 'Auf Wiedersehen' auf Japanisch?",
-    options: ["mata ashita", "ja nee", "mata ne", "sayōnara"],
-    answer: "sayōnara",
+    options: ["mata ashita", "ja nee", "mata ne", "sayounara"],
+    answer: "sayounara",
   },
   {
     question: "Was heißt 'Danke' auf Japanisch?",
@@ -59,20 +59,55 @@ const vocabQuestionsK3 = [
     answer: "arigato",
   },
   {
-    question: "Was heißt 'Auto' auf Japanisch?",
-    options: ["yane", "kuruma", "raion", "sakura"],
-    answer: "kuruma",
+    question: "Was heißt 'Mein Name' auf Japanisch?",
+    options: ["watashi no namae", "anata wa desu", "namae", "sakura"],
+    answer: "watashi no namae",
   },
 ];
 
-const textQuestions = [
+let textQuestions1 = [
   { question: "Ich trinke gerne ___ (Wasser).", answer: "mizu" },
   { question: "Der ___ (Baum) ist groß.", answer: "ki" },
   { question: "Das ___ (Feuer) ist heiß.", answer: "hi" },
   { question: "Der ___ (Berg) ist hoch.", answer: "yama" },
 ];
+let textQuestion2 = [
+  { question: "Das ist mein ___ (Haus).", answer: "ie" },
+  { question: "Die ___ (Katze) ist noch jung.", answer: "neko" },
+  { question: "Der ___ (Hund) hat ist weiblich.", answer: "inu" },
+  { question: "Das ___ (Auto) ist teuer.", answer: "kuruma" },
+];
+let textQuestion3 = [
+  { question: "___ (Hallo) wie geht es dir.", answer: "konnichiwa" },
+  { question: "___ (Auf Wiedersehen), wir sehen uns wieder.", answer: "sayounara" },
+  { question: "___ (Danke) für das Geschenk.", answer: "arigato" },
+  { question: "___ (Mein Name) ist Tobias.", answer: "watashi no namae" },
+];
 
-const audioQuestions = [
+
+let audioQuestions1 = [
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/water.mp3",
+    answer: "Wasser",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/tree.mp3",
+    answer: "Baum",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/fire.mp3",
+    answer: "Feuer",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/berg.mp3",
+    answer: "Berg",
+  },
+];
+let audioQuestions2 = [
   {
     question: "Was heißt ... auf Deutsch?",
     audio: "../audio/house.mp3",
@@ -94,6 +129,28 @@ const audioQuestions = [
     answer: "Auto",
   },
 ];
+let audioQuestions3 = [
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/house.mp3",
+    answer: "konnichiwa",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/dog.mp3",
+    answer: "sayounara",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/cat.mp3",
+    answer: "arigato",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/car.mp3",
+    answer: "watashi no namae",
+  },
+];
 
 let quizType = "";
 let currentQuiz = [];
@@ -109,9 +166,9 @@ function startQuiz(type) {
   if (type === "vocab") {
     currentQuiz = [...vocabQuestionsK1];
   } else if (type === "text") {
-    currentQuiz = [...textQuestions];
+    currentQuiz = [...textQuestions1];
   } else if (type === "audio") {
-    currentQuiz = [...audioQuestions];
+    currentQuiz = [...audioQuestions1];
   }
   document.getElementById("quiz-box").style.display = "block";
   showQuestion();
