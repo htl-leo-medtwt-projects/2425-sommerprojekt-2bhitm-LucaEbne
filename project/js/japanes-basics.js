@@ -23,7 +23,7 @@ let vocabQuestionsK1 = [
 let vocabQuestionsK2 = [
   {
     question: "Was heißt 'Haus' auf Japanisch?",
-    options: ["ie","apāto", "yane", "kin"],
+    options: ["ie", "apāto", "yane", "kin"],
     answer: "ie",
   },
   {
@@ -45,7 +45,7 @@ let vocabQuestionsK2 = [
 let vocabQuestionsK3 = [
   {
     question: "Was heißt 'Hallo' auf Japanisch?",
-    options: ["moshi-moshi","irasshaimase", "konnichiwa", "yahhoo"],
+    options: ["moshi-moshi", "irasshaimase", "konnichiwa", "yahhoo"],
     answer: "konnichiwa",
   },
   {
@@ -132,23 +132,23 @@ let audioQuestions2 = [
 let audioQuestions3 = [
   {
     question: "Was heißt ... auf Deutsch?",
-    audio: "../audio/house.mp3",
-    answer: "konnichiwa",
+    audio: "../audio/hallo.mp3",
+    answer: "hallo",
   },
   {
     question: "Was heißt ... auf Deutsch?",
-    audio: "../audio/dog.mp3",
-    answer: "sayounara",
+    audio: "../audio/auf-wiedersehen.mp3",
+    answer: "auf wiedersehen",
   },
   {
     question: "Was heißt ... auf Deutsch?",
-    audio: "../audio/cat.mp3",
-    answer: "arigato",
+    audio: "../audio/danke.mp3",
+    answer: "danke",
   },
   {
     question: "Was heißt ... auf Deutsch?",
-    audio: "../audio/car.mp3",
-    answer: "watashi no namae",
+    audio: "../audio/mein-name.mp3",
+    answer: "mein name",
   },
 ];
 
@@ -159,7 +159,8 @@ let currentIndexQuiz = 0;
 let selectedCategory = 1;
 
 function chooseCategory(type) {
-  const categoryBox = document.getElementById("quiz-category-selector");
+
+  let categoryBox = document.getElementById("quiz-category-selector");
 
   if (quizType === type && categoryBox.style.display === "flex") {
     categoryBox.style.display = "none";
@@ -178,17 +179,81 @@ function startQuizWithCategory(category) {
   wrongAnswers = [];
 
   if (quizType === "vocab") {
-    currentQuiz = category === 1 ? vocabQuestionsK1 :
-                  category === 2 ? vocabQuestionsK2 :
-                  vocabQuestionsK3;
+    document.getElementById("1").style.borderLeft = "8px solid rgb(249, 47, 168)";
+    document.getElementById("2").style.borderLeft = "none";
+    document.getElementById("3").style.borderLeft = "none";
+    switch (category) {
+      case 1:
+        document.getElementById("K1").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        currentQuiz = vocabQuestionsK1;
+        break;
+      case 2:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        currentQuiz = vocabQuestionsK2;
+        break;
+      case 3:
+      default:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)";
+        currentQuiz = vocabQuestionsK3;
+        break;
+    }
+
   } else if (quizType === "text") {
-    currentQuiz = category === 1 ? textQuestions1 :
-                  category === 2 ? textQuestion2 :
-                  textQuestion3;
+    document.getElementById("1").style.borderLeft = "none";
+    document.getElementById("2").style.borderLeft = "8px solid rgb(249, 47, 168)";
+    document.getElementById("3").style.borderLeft = "none";
+    switch (category) {
+      case 1:
+        document.getElementById("K1").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        currentQuiz = textQuestions1;
+        break;
+      case 2:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        currentQuiz = textQuestion2;
+        break;
+      case 3:
+      default:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)";
+        currentQuiz = textQuestion3;
+        break;
+    }
   } else if (quizType === "audio") {
-    currentQuiz = category === 1 ? audioQuestions1 :
-                  category === 2 ? audioQuestions2 :
-                  audioQuestions3;
+    document.getElementById("1").style.borderLeft = "none";
+    document.getElementById("2").style.borderLeft = "none";
+    document.getElementById("3").style.borderLeft = "8px solid rgb(249, 47, 168)";
+    switch (category) {
+      case 1:
+        document.getElementById("K1").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        currentQuiz = audioQuestions1;
+        break;
+      case 2:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        currentQuiz = audioQuestions2;
+        break;
+      case 3:
+      default:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)";
+        currentQuiz = audioQuestions3;
+        break;
+    }
   }
 
   document.getElementById("quiz-box").style.display = "block";

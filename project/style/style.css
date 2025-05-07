@@ -6,35 +6,43 @@
   --box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
   --rating-background-color: #fff;
 }
+
 @font-face {
   font-family: "myFont";
   src: url(../font/ZenKakuGothicAntique-Regular.ttf);
 }
+
 body {
   background-color: var(--background-color);
 }
+
 * {
   margin: 0;
   padding: 0;
   font-family: "myFont";
 }
+
 #header1 {
   position: relative;
   width: 100%;
   height: 40%;
 }
+
 #header2 {
   position: relative;
   width: 100%;
   height: 10%;
 }
+
 #cover {
   width: 100%;
 }
+
 #cover2 {
   width: 100%;
   height: 500px;
 }
+
 .rectangle {
   position: absolute;
   height: 99%;
@@ -43,6 +51,7 @@ body {
   top: 0%;
   opacity: 30%;
 }
+
 .rectangle2 {
   position: absolute;
   height: 99%;
@@ -51,6 +60,7 @@ body {
   top: 0%;
   opacity: 50%;
 }
+
 .headerText {
   position: absolute;
   top: 60%;
@@ -59,6 +69,7 @@ body {
   text-align: center;
   color: white;
 }
+
 #LightModeSwitch {
   width: 3.5%;
   position: absolute;
@@ -66,6 +77,7 @@ body {
   right: 2%;
   z-index: 5;
 }
+
 #HomeButton {
   width: 3%;
   position: absolute;
@@ -73,6 +85,7 @@ body {
   right: 96%;
   font-size: 1.5em;
 }
+
 .navbar {
   position: absolute;
   top: 4%;
@@ -117,18 +130,21 @@ body {
   justify-content: center;
   margin-top: 10%;
 }
+
 .slideShowCover {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--card-bg-color);
 }
+
 .slideShowCover img {
   width: 400px;
   height: 450px;
   object-fit: cover;
   border-radius: 5px;
 }
+
 .slideShowCover h2 {
   margin-bottom: 10%;
   color: var(--card-text-color);
@@ -148,6 +164,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .slideshow {
   position: relative;
   display: flex;
@@ -156,6 +173,7 @@ body {
   padding: 10%;
   border-radius: 10%;
 }
+
 #slideshow-image {
   width: 600px;
   height: 400px;
@@ -163,6 +181,7 @@ body {
   border-radius: 5%;
   transition: opacity 0.8s ease-in-out;
 }
+
 .close-btn {
   position: absolute;
   top: -17%;
@@ -171,6 +190,7 @@ body {
   font-size: 3rem;
   cursor: pointer;
 }
+
 .nav-btn {
   position: absolute;
   top: 50%;
@@ -181,20 +201,24 @@ body {
   cursor: pointer;
   color: black;
 }
+
 .nav-left {
   transform: rotateY(180deg);
   top: 39.5%;
   left: -5%;
 }
+
 #imgArrow {
   width: 141px;
   height: 141px;
   flex-shrink: 0;
   aspect-ratio: 1/1;
 }
+
 .nav-right {
   right: -5%;
 }
+
 .blossom {
   position: absolute;
   top: -50px;
@@ -212,6 +236,7 @@ body {
     transform: translateY(-10px) rotate(0deg);
     opacity: 1;
   }
+
   100% {
     transform: translateY(100vh) rotate(360deg);
     opacity: 0;
@@ -328,7 +353,7 @@ body {
   padding: 1%;
 }
 
-#mustSeePlace{
+#mustSeePlace {
   display: flex;
   flex-direction: column;
   gap: 0.6em;
@@ -340,6 +365,7 @@ body {
   margin-top: 2%;
   padding: 1%;
 }
+
 .mustSeeText {
   display: flex;
   flex-direction: column;
@@ -357,6 +383,7 @@ body {
   padding-left: 1.2em;
   margin: 0;
 }
+
 .mustSeeText li {
   list-style: none;
   margin-bottom: 0.4em;
@@ -365,6 +392,7 @@ body {
   position: relative;
   padding-left: 0.5em;
 }
+
 .flexDesignRating {
   display: flex;
   align-items: center;
@@ -376,10 +404,22 @@ body {
   height: auto;
   transform: none;
 }
-#game-container{
-  display: flex;
-  gap:10.5em;
+
+#body-Basics {
+  background: linear-gradient(to bottom, #fff1f9, #ffffff);
 }
+
+#game-container {
+  display: flex;
+  gap: 10.5em;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 92%;
+  margin: 2em auto;
+}
+
 .quiz-container {
   display: flex;
   width: 30%;
@@ -390,6 +430,7 @@ body {
   border-radius: 1.25em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
 }
+
 .quiz-mode-selector {
   display: flex;
   flex-direction: column;
@@ -420,13 +461,14 @@ body {
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   padding: 2.1em;
 }
+
 .quiz-category-box {
   padding: 12px 20px;
-  border: 2px solid #8e44ad; 
+  border: 2px solid #8e44ad;
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
-  background-color: #fdf6ff; 
+  background-color: #fdf6ff;
   color: #4a235a;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -442,10 +484,11 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-left: auto;
-  margin-right: auto ;
+  margin-right: auto;
   align-items: center;
   gap: 15px;
 }
+
 #quiz-question {
   font-size: 1.5em;
   margin-bottom: 1.25em;
