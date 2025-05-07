@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Japan Tourguide</title>
-    <script src="../js/main_script.js" defer></script>
-    <script src="../js/japanes-basics.js"></script>
-    <link rel="stylesheet" href="../style/style.css" />
-  </head>
 
-  <body>
-    <header id="header2">
-      <img id="cover2" src="../img/JapaneseBasicsCover.jpg" alt="" />
-      <div class="rectangle"></div>
-      <div class="headerText">
-        <p>Japanese<br />Basics</p>
-      </div>
-      <a href="../index.html"
-        ><img id="HomeButton" src="../img/Home.png" alt=""
-      /></a>
-      <img
-        onclick="ModeSwitchSubPages()"
-        id="LightModeSwitch"
-        src="../img/Moon_Icon.png"
-        alt=""
-      />
-      <div class="navbar">
-        <a href="sights.html">Sights</a>
-        <a href="restaurants.html">Restaurants</a>
-        <a href="japanese-basics.html" class="active">Japanese Basics</a>
-        <div class="nav-indicator" id="navIndicator"></div>
-      </div>
-    </header>
-    <div class="quiz-container">
-      <div class="quiz-mode-selector" id="quiz-mode-selector-hidden">
-        <div class="quiz-mode-box" onclick="startQuiz('vocab')">
-          Vokabeln üben
-        </div>
-        <div class="quiz-mode-box" onclick="startQuiz('text')">
-          Lückentext üben
-        </div>
-        <div class="quiz-mode-box" onclick="startQuiz('audio')">Audio üben</div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan Tourguide</title>
+  <script src="../js/main_script.js" defer></script>
+  <script src="../js/japanes-basics.js"></script>
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
 
-      <div id="quiz-box" class="quiz-box" style="display: none">
-        <div id="quiz-question"></div>
-        <div id="quiz-options"></div>
-      </div>
+<body>
+  <header id="header2">
+    <img id="cover2" src="../img/JapaneseBasicsCover.jpg" alt="" />
+    <div class="rectangle"></div>
+    <div class="headerText">
+      <p>Japanese<br />Basics</p>
     </div>
-  </body>
+    <a href="../index.html"><img id="HomeButton" src="../img/Home.png" alt="" /></a>
+    <img onclick="ModeSwitchSubPages()" id="LightModeSwitch" src="../img/Moon_Icon.png" alt="" />
+    <div class="navbar">
+      <a href="sights.html">Sights</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="japanese-basics.html" class="active">Japanese Basics</a>
+      <div class="nav-indicator" id="navIndicator"></div>
+    </div>
+  </header>
+  <div id="game-container">
+    <div class="quiz-container">
+
+      <div class="quiz-mode-selector">
+        <div class="quiz-mode-box" onclick="chooseCategory('vocab')">Vokabeln üben</div>
+        <div class="quiz-mode-box" onclick="chooseCategory('text')">Lückenttext üben</div>
+        <div class="quiz-mode-box" onclick="chooseCategory('audio')">Audio üben</div>
+      </div>
+
+      <div class="quiz-category-selector" id="quiz-category-selector" style="display: none;">
+        <div class="quiz-category-box" onclick="startQuizWithCategory(1)">Quiz 1</div>
+        <div class="quiz-category-box" onclick="startQuizWithCategory(2)">Quiz 2</div>
+        <div class="quiz-category-box" onclick="startQuizWithCategory(3)">Quiz 3</div>
+      </div>
+
+
+    </div>
+    <div id="quiz-box" class="quiz-box" style="display: none">
+      <div id="quiz-question"></div>
+      <div id="quiz-options"></div>
+    </div>
+  </div>
+
+</body>
+
 </html>

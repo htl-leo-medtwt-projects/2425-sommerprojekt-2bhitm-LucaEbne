@@ -156,23 +156,46 @@ let quizType = "";
 let currentQuiz = [];
 let wrongAnswers = [];
 let currentIndexQuiz = 0;
+let selectedCategory = 1;
 
-function startQuiz(type) {
-  let modes = document.getElementById("quiz-mode-selector-hidden");
-  modes.style.display = "none";
+function chooseCategory(type) {
+  const categoryBox = document.getElementById("quiz-category-selector");
+
+  if (quizType === type && categoryBox.style.display === "flex") {
+    categoryBox.style.display = "none";
+    quizType = "";
+    return;
+  }
   quizType = type;
+  categoryBox.style.display = "flex";
+}
+
+function startQuizWithCategory(category) {
+  selectedCategory = category;
+  document.getElementById("quiz-category-selector").style.display = "none";
+
   currentIndexQuiz = 0;
   wrongAnswers = [];
-  if (type === "vocab") {
-    currentQuiz = [...vocabQuestionsK1];
-  } else if (type === "text") {
-    currentQuiz = [...textQuestions1];
-  } else if (type === "audio") {
-    currentQuiz = [...audioQuestions1];
+
+  if (quizType === "vocab") {
+    currentQuiz = category === 1 ? vocabQuestionsK1 :
+                  category === 2 ? vocabQuestionsK2 :
+                  vocabQuestionsK3;
+  } else if (quizType === "text") {
+    currentQuiz = category === 1 ? textQuestions1 :
+                  category === 2 ? textQuestion2 :
+                  textQuestion3;
+  } else if (quizType === "audio") {
+    currentQuiz = category === 1 ? audioQuestions1 :
+                  category === 2 ? audioQuestions2 :
+                  audioQuestions3;
   }
+
   document.getElementById("quiz-box").style.display = "block";
   showQuestion();
 }
+
+
 
 function showQuestion() {
   let q = currentQuiz[currentIndexQuiz];
