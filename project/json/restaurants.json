@@ -1,0 +1,482 @@
+[
+    {
+        "name": "Sézanne",
+        "location": "Tokyo",
+        "opening_hours": "Dienstag bis Samstag: 18:00-21:30 Uhr",
+        "rating": 4.9,
+        "dishes": [
+            {
+                "name": "Peking-Style Japanese Duck",
+                "price_yen": 4800
+            },
+            {
+                "name": "Foie Gras mit Miso",
+                "price_yen": 4200
+            },
+            {
+                "name": "Sashimi vom Thunfisch",
+                "price_yen": 3000
+            },
+            {
+                "name": "Wagyu-Rind mit Trüffel",
+                "price_yen": 9800
+            },
+            {
+                "name": "Hummer-Tartar",
+                "price_yen": 5100
+            },
+            {
+                "name": "Matcha-Dessert",
+                "price_yen": 1500
+            },
+            {
+                "name": "Kaviar mit Yuzu",
+                "price_yen": 8500
+            },
+            {
+                "name": "Gebratene Jakobsmuscheln",
+                "price_yen": 3900
+            },
+            {
+                "name": "Sakura-Eis",
+                "price_yen": 1200
+            },
+            {
+                "name": "Saisonales Gemüse-Tempura",
+                "price_yen": 2600
+            }
+        ]
+    },
+    {
+        "name": "Florilège",
+        "location": "Tokyo",
+        "opening_hours": "Dienstag bis Samstag: 18:00-21:00 Uhr",
+        "rating": 4.8,
+        "dishes": [
+            {
+                "name": "Miyazaki-Rind Carpaccio",
+                "price_yen": 5600
+            },
+            {
+                "name": "Gegrillter Aal mit Teriyaki",
+                "price_yen": 4600
+            },
+            {
+                "name": "Rote-Bete-Salat mit Ziegenkäse",
+                "price_yen": 2100
+            },
+            {
+                "name": "Kürbis-Suppe mit Ingwer",
+                "price_yen": 1800
+            },
+            {
+                "name": "Gebratene Ente mit Orangen-Glasur",
+                "price_yen": 5400
+            },
+            {
+                "name": "Sashimi vom Lachs",
+                "price_yen": 2800
+            },
+            {
+                "name": "Tempura-Gemüse",
+                "price_yen": 2500
+            },
+            {
+                "name": "Matcha-Tiramisu",
+                "price_yen": 1600
+            },
+            {
+                "name": "Sakura-Mochi",
+                "price_yen": 1200
+            },
+            {
+                "name": "Yuzu-Sorbet",
+                "price_yen": 1100
+            }
+        ]
+    },
+    {
+        "name": "Den",
+        "location": "Tokyo",
+        "opening_hours": "Dienstag bis Samstag: 17:00-22:00 Uhr",
+        "rating": 4.7,
+        "dishes": [
+            {
+                "name": "Dentucky Fried Chicken",
+                "price_yen": 3500
+            },
+            {
+                "name": "Gegrillter Fisch mit Miso",
+                "price_yen": 2800
+            },
+            {
+                "name": "Sashimi-Platte",
+                "price_yen": 3200
+            },
+            {
+                "name": "Wagyu-Rind mit Wasabi",
+                "price_yen": 8900
+            },
+            {
+                "name": "Tempura-Garnelen",
+                "price_yen": 3400
+            },
+            {
+                "name": "Udon-Nudeln mit Brühe",
+                "price_yen": 1500
+            },
+            {
+                "name": "Matcha-Pudding",
+                "price_yen": 1200
+            },
+            {
+                "name": "Sakura-Eis",
+                "price_yen": 1000
+            },
+            {
+                "name": "Gegrilltes Gemüse",
+                "price_yen": 1900
+            },
+            {
+                "name": "Yuzu-Kuchen",
+                "price_yen": 1400
+            }
+        ]
+    },
+    {
+        "name": "La Cime",
+        "location": "Osaka",
+        "opening_hours": "Dienstag bis Samstag: 18:00-21:30 Uhr",
+        "rating": 4.8,
+        "dishes": [
+            {
+                "name": "Okonomiyaki mit Meeresfrüchten",
+                "price_yen": 2400
+            },
+            {
+                "name": "Takoyaki",
+                "price_yen": 800
+            },
+            {
+                "name": "Gegrillter Aal",
+                "price_yen": 3800
+            },
+            {
+                "name": "Sashimi vom Thunfisch",
+                "price_yen": 3000
+            },
+            {
+                "name": "Wagyu-Rind mit Sojasauce",
+                "price_yen": 9200
+            },
+            {
+                "name": "Tempura-Gemüse",
+                "price_yen": 2500
+            },
+            {
+                "name": "Matcha-Eis",
+                "price_yen": 1200
+            },
+            {
+                "name": "Sakura-Mochi",
+                "price_yen": 1000
+            },
+            {
+                "name": "Yuzu-Sorbet",
+                "price_yen": 1100
+            },
+            {
+                "name": "Gebratene Jakobsmuscheln",
+                "price_yen": 3900
+            }
+        ]
+    },
+    {
+        "name": "Narisawa",
+        "location": "Tokyo",
+        "opening_hours": "Dienstag bis Samstag: 18:00-21:00 Uhr",
+        "rating": 4.9,
+        "dishes": [
+            {
+                "name": "Saisonales Gemüse-Tasting",
+                "price_yen": 3500
+            },
+            {
+                "name": "Gegrillter Fisch mit Yuzu",
+                "price_yen": 4000
+            },
+            {
+                "name": "Wagyu-Rind mit Trüffel",
+                "price_yen": 9800
+            },
+            {
+                "name": "Sashimi vom Lachs",
+                "price_yen": 2800
+            },
+            {
+                "name": "Tempura-Garnelen",
+                "price_yen": 3400
+            },
+            {
+                "name": "Matcha-Dessert",
+                "price_yen": 1500
+            },
+            {
+                "name": "Sakura-Eis",
+                "price_yen": 1200
+            },
+            {
+                "name": "Yuzu-Kuchen",
+                "price_yen": 1400
+            },
+            {
+                "name": "Gegrilltes Gemüse",
+                "price_yen": 1900
+            },
+            {
+                "name": "Miso-Suppe",
+                "price_yen": 800
+            }
+        ]
+    },
+    {
+        "name": "Sazenka",
+        "location": "Tokyo",
+        "opening_hours": "Dienstag bis Samstag: 18:00-21:30 Uhr",
+        "rating": 4.8,
+        "dishes": [
+            {
+                "name": "Peking-Ente",
+                "price_yen": 4800
+            },
+            {
+                "name": "Szechuan-Rind",
+                "price_yen": 4200
+            },
+            {
+                "name": "Gedämpfter Fisch mit Sojasauce",
+                "price_yen": 3000
+            },
+            {
+                "name": "Dim Sum",
+                "price_yen": 2500
+            },
+            {
+                "name": "Gebratene Nudeln",
+                "price_yen": 1800
+            },
+            {
+                "name": "Sashimi vom Thunfisch",
+                "price_yen": 3000
+            },
+            {
+                "name": "Tempura-Gemüse",
+                "price_yen": 2500
+            },
+            {
+                "name": "Matcha-Pudding",
+                "price_yen": 1200
+            },
+            {
+                "name": "Sakura-Mochi",
+                "price_yen": 1000
+            },
+            {
+                "name": "Yuzu-Sorbet",
+                "price_yen": 1100
+            }
+        ]
+    },
+    {
+        "name": "Villa Aida",
+        "location": "Wakayama",
+        "opening_hours": "Mittwoch bis Sonntag: 17:30-21:00 Uhr",
+        "rating": 4.7,
+        "dishes": [
+            {
+                "name": "Gegrilltes Gemüse",
+                "price_yen": 1900
+            },
+            {
+                "name": "Sashimi vom Lachs",
+                "price_yen": 2800
+            },
+            {
+                "name": "Wagyu-Rind mit Wasabi",
+                "price_yen": 8900
+            },
+            {
+                "name": "Tempura-Garnelen",
+                "price_yen": 3400
+            },
+            {
+                "name": "Matcha-Eis",
+                "price_yen": 1200
+            },
+            {
+                "name": "Sakura-Mochi",
+                "price_yen": 1000
+            },
+            {
+                "name": "Yuzu-Kuchen",
+                "price_yen": 1400
+            },
+            {
+                "name": "Gegrillter Fisch mit Miso",
+                "price_yen": 2800
+            },
+            {
+                "name": "Udon-Nudeln mit Brühe",
+                "price_yen": 1500
+            },
+            {
+                "name": "Miso-Suppe",
+                "price_yen": 800
+            }
+        ]
+    },
+    {
+        "name": "Goh",
+        "location": "Fukuoka",
+        "opening_hours": "Dienstag bis Samstag: 18:00-21:30 Uhr",
+        "rating": 4.8,
+        "dishes": [
+            {
+                "name": "Gegrillter Aal",
+                "price_yen": 3800
+            },
+            {
+                "name": "Sashimi vom Thunfisch",
+                "price_yen": 3000
+            },
+            {
+                "name": "Wagyu-Rind mit Sojasauce",
+                "price_yen": 9200
+            },
+            {
+                "name": "Tempura-Gemüse",
+                "price_yen": 2500
+            },
+            {
+                "name": "Matcha-Dessert",
+                "price_yen": 1500
+            },
+            {
+                "name": "Sakura-Eis",
+                "price_yen": 1200
+            },
+            {
+                "name": "Yuzu-Kuchen",
+                "price_yen": 1400
+            },
+            {
+                "name": "Gegrilltes Gemüse",
+                "price_yen": 1900
+            },
+            {
+                "name": "Miso-Suppe",
+                "price_yen": 800
+            },
+            {
+                "name": "Udon-Nudeln mit Brühe",
+                "price_yen": 1500
+            }
+        ]
+    },
+    {
+        "name": "Kagurazaka Ishikawa",
+        "location": "Tokyo",
+        "opening_hours": "Montag bis Samstag: 17:30-23:00 Uhr",
+        "rating": 4.8,
+        "dishes": [
+            {
+                "name": "Kaiseki Menü (Saison)",
+                "preis": "¥28,000"
+            },
+            {
+                "name": "Gegrillter Aal mit Reis",
+                "preis": "¥5,000"
+            },
+            {
+                "name": "Kobe-Rind Sukiyaki",
+                "preis": "¥8,500"
+            },
+            {
+                "name": "Miso-Suppe mit Yuba",
+                "preis": "¥1,500"
+            },
+            {
+                "name": "Tempura von Meeresfrüchten",
+                "preis": "¥4,000"
+            },
+            {
+                "name": "Sashimi-Auswahl",
+                "preis": "¥6,000"
+            },
+            {
+                "name": "Gedämpfter Seeteufel",
+                "preis": "¥3,800"
+            },
+            {
+                "name": "Matcha-Dessert",
+                "preis": "¥1,200"
+            },
+            {
+                "name": "Hausgemachter Tofu",
+                "preis": "¥1,000"
+            },
+            {
+                "name": "Grüner Tee (Heiß)",
+                "preis": "¥700"
+            }
+        ]
+    },
+    {
+        "name": "Sushi Saito",
+        "location": "Tokyo",
+        "opening_hours": "Montag bis Freitag: 11:30-14:00 Uhr, 17:00-22:00 Uhr",
+        "rating": 4.8,
+        "dishes": [
+            {
+                "name": "Omakase Sushi Menü",
+                "preis": "¥32,000"
+            },
+            {
+                "name": "Toro (fetter Thunfisch)",
+                "preis": "¥4,000"
+            },
+            {
+                "name": "Uni (Seeigel)",
+                "preis": "¥3,500"
+            },
+            {
+                "name": "Ikura (Lachskaviar)",
+                "preis": "¥2,800"
+            },
+            {
+                "name": "Ebi (Garnelen)",
+                "preis": "¥2,200"
+            },
+            {
+                "name": "Anago (Meeraal)",
+                "preis": "¥2,600"
+            },
+            {
+                "name": "Tamago (süßes Omelett)",
+                "preis": "¥1,500"
+            },
+            {
+                "name": "Miso-Suppe mit Muscheln",
+                "preis": "¥1,200"
+            },
+            {
+                "name": "Saba (Makrele)",
+                "preis": "¥2,000"
+            },
+            {
+                "name": "Matcha-Eis",
+                "preis": "¥900"
+            }
+        ]
+    }
+]
