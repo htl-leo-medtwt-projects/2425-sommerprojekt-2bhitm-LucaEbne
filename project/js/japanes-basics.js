@@ -348,10 +348,10 @@ function nextQuestion() {
     showQuestion();
   } else {
     document.getElementById("quiz-box").innerHTML =
-      "<p>Quiz abgeschlossen!</p>";
+      "<p id='endScreen'>Quiz abgeschlossen!</p>";
     setTimeout(() => {
       end();
-    }, 1000);
+    }, 2000);
   }
 }
 function end() {
