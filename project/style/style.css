@@ -512,7 +512,10 @@ body {
   background-color: #ffd6ea;
   transform: scale(1.02);
 }
-
+#endScreen{
+  font-size: 3em;
+  color: #d47593;
+}
 #audio-player {
   margin-top: 1em;
   width: 100%;
