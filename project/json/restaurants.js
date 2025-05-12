@@ -1,4 +1,4 @@
-[
+let restaurants = [
     {
         "name": "Sézanne",
         "location": "Tokyo",
