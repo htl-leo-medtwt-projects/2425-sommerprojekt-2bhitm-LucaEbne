@@ -391,43 +391,43 @@ let restaurants = [
         "dishes": [
             {
                 "name": "Kaiseki Menü (Saison)",
-                "preis": "¥28,000"
+                "preis_yen": 28000
             },
             {
                 "name": "Gegrillter Aal mit Reis",
-                "preis": "¥5,000"
+                "preis_yen": 5000
             },
             {
                 "name": "Kobe-Rind Sukiyaki",
-                "preis": "¥8,500"
+                "preis_yen": 8500
             },
             {
                 "name": "Miso-Suppe mit Yuba",
-                "preis": "¥1,500"
+                "preis_yen": 1500
             },
             {
                 "name": "Tempura von Meeresfrüchten",
-                "preis": "¥4,000"
+                "preis_yen": 4000
             },
             {
                 "name": "Sashimi-Auswahl",
-                "preis": "¥6,000"
+                "preis_yen": 6000
             },
             {
                 "name": "Gedämpfter Seeteufel",
-                "preis": "¥3,800"
+                "preis_yen": 3800
             },
             {
                 "name": "Matcha-Dessert",
-                "preis": "¥1,200"
+                "preis_yen": 1200
             },
             {
                 "name": "Hausgemachter Tofu",
-                "preis": "¥1,000"
+                "preis_yen": 1000
             },
             {
                 "name": "Grüner Tee (Heiß)",
-                "preis": "¥700"
+                "preis_yen": 700
             }
         ]
     },
@@ -439,43 +439,43 @@ let restaurants = [
         "dishes": [
             {
                 "name": "Omakase Sushi Menü",
-                "preis": "¥32,000"
+                "preis_yen": 32000
             },
             {
                 "name": "Toro (fetter Thunfisch)",
-                "preis": "¥4,000"
+                "preis_yen": 4000
             },
             {
                 "name": "Uni (Seeigel)",
-                "preis": "¥3,500"
+                "preis_yen": 3500
             },
             {
                 "name": "Ikura (Lachskaviar)",
-                "preis": "¥2,800"
+                "preis_yen": 2800
             },
             {
                 "name": "Ebi (Garnelen)",
-                "preis": "¥2,200"
+                "preis_yen": 2200
             },
             {
                 "name": "Anago (Meeraal)",
-                "preis": "¥2,600"
+                "preis_yen": 2600
             },
             {
                 "name": "Tamago (süßes Omelett)",
-                "preis": "¥1,500"
+                "preis_yen": 1500
             },
             {
                 "name": "Miso-Suppe mit Muscheln",
-                "preis": "¥1,200"
+                "preis_yen": 1200
             },
             {
                 "name": "Saba (Makrele)",
-                "preis": "¥2,000"
+                "preis_yen": 2000
             },
             {
                 "name": "Matcha-Eis",
-                "preis": "¥900"
+                "preis_yen": 900
             }
         ]
     }
