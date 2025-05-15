@@ -551,8 +551,26 @@ body {
 
 
 
+/* Restaurant Seite */
+.dishName{
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  font-size: 0.8em;
+  color: white;
+  text-align: center;
+  font-weight: 2000;
+  border-bottom: 1px solid white;
+}
+.dishPrice{
+  position: absolute;
+  top: 35%;
+  color: white;
+  font-weight:1500;
+  font-size: 0.8em;
+  left: 0.3em;
+}
 
-/* From Uiverse.io by musashi-13 */ 
 @keyframes autoRun3d {
   from {
     transform: perspective(800px) rotateY(-360deg);
@@ -596,7 +614,20 @@ body {
   transition-duration: 200ms;
   will-change: transform, filter;
 }
-
+.rect{
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 20s linear infinite;
+  transition-duration: 200ms;
+  will-change: transform, filter;
+  background-color: black;
+  opacity: 0.4;
+}
 .card-3d:hover {
   animation-play-state: paused !important;
 }

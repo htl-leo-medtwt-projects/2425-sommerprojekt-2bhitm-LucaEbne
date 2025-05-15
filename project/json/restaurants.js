@@ -6,7 +6,7 @@ let restaurants = [
         "rating": 4.9,
         "dishes": [
             {
-                "name": "Peking-Style Japanese Duck",
+                "name": "Japanese Duck",
                 "price_yen": 4800
             },
             {
@@ -34,15 +34,15 @@ let restaurants = [
                 "price_yen": 8500
             },
             {
-                "name": "Gebratene Jakobsmuscheln",
+                "name": "Gebratene Jakobmuschel",
                 "price_yen": 3900
             },
             {
-                "name": "Sakura-Eis",
+                "name": "Sakura-Eis-Spezial",
                 "price_yen": 1200
             },
             {
-                "name": "Saisonales Gemüse-Tempura",
+                "name": "Gemüse-Tempura",
                 "price_yen": 2600
             }
         ]
@@ -62,7 +62,7 @@ let restaurants = [
                 "price_yen": 4600
             },
             {
-                "name": "Rote-Bete-Salat mit Ziegenkäse",
+                "name": "Rote-Bete-Bowl",
                 "price_yen": 2100
             },
             {
@@ -70,7 +70,7 @@ let restaurants = [
                 "price_yen": 1800
             },
             {
-                "name": "Gebratene Ente mit Orangen-Glasur",
+                "name": "Gebratene Ente",
                 "price_yen": 5400
             },
             {
@@ -86,11 +86,11 @@ let restaurants = [
                 "price_yen": 1600
             },
             {
-                "name": "Sakura-Mochi",
+                "name": "Sakura-Mochi-Spezial",
                 "price_yen": 1200
             },
             {
-                "name": "Yuzu-Sorbet",
+                "name": "Yuzu-Sorbet-Dessert",
                 "price_yen": 1100
             }
         ]
@@ -130,7 +130,7 @@ let restaurants = [
                 "price_yen": 1200
             },
             {
-                "name": "Sakura-Eis",
+                "name": "Sakura-Eis-Spezial",
                 "price_yen": 1000
             },
             {
@@ -138,7 +138,7 @@ let restaurants = [
                 "price_yen": 1900
             },
             {
-                "name": "Yuzu-Kuchen",
+                "name": "Yuzu-Kuchen-Dessert",
                 "price_yen": 1400
             }
         ]
@@ -150,15 +150,15 @@ let restaurants = [
         "rating": 4.8,
         "dishes": [
             {
-                "name": "Okonomiyaki mit Meeresfrüchten",
+                "name": "Okonomiyaki Meeresfrüchte",
                 "price_yen": 2400
             },
             {
-                "name": "Takoyaki",
+                "name": "Saisonales-Takoyaki",
                 "price_yen": 800
             },
             {
-                "name": "Gegrillter Aal",
+                "name": "Gegrillter Aal mit Sesam",
                 "price_yen": 3800
             },
             {
@@ -174,19 +174,19 @@ let restaurants = [
                 "price_yen": 2500
             },
             {
-                "name": "Matcha-Eis",
+                "name": "Matcha-Eis-Dessert",
                 "price_yen": 1200
             },
             {
-                "name": "Sakura-Mochi",
+                "name": "Sakura-Mochi-Spezial",
                 "price_yen": 1000
             },
             {
-                "name": "Yuzu-Sorbet",
+                "name": "Yuzu-Sorbet-Dessert",
                 "price_yen": 1100
             },
             {
-                "name": "Gebratene Jakobsmuscheln",
+                "name": "Gebratene Jakobmuschel",
                 "price_yen": 3900
             }
         ]
@@ -198,7 +198,7 @@ let restaurants = [
         "rating": 4.9,
         "dishes": [
             {
-                "name": "Saisonales Gemüse-Tasting",
+                "name": "Gemüse-Tasting",
                 "price_yen": 3500
             },
             {
@@ -222,11 +222,11 @@ let restaurants = [
                 "price_yen": 1500
             },
             {
-                "name": "Sakura-Eis",
+                "name": "Sakura-Eis-Spezial",
                 "price_yen": 1200
             },
             {
-                "name": "Yuzu-Kuchen",
+                "name": "Yuzu-Kuchen-Dessert",
                 "price_yen": 1400
             },
             {
@@ -234,7 +234,7 @@ let restaurants = [
                 "price_yen": 1900
             },
             {
-                "name": "Miso-Suppe",
+                "name": "Saisonale Miso-Suppe",
                 "price_yen": 800
             }
         ]
@@ -246,7 +246,7 @@ let restaurants = [
         "rating": 4.8,
         "dishes": [
             {
-                "name": "Peking-Ente",
+                "name": "Saisonale Peking-Ente",
                 "price_yen": 4800
             },
             {
@@ -254,11 +254,11 @@ let restaurants = [
                 "price_yen": 4200
             },
             {
-                "name": "Gedämpfter Fisch mit Sojasauce",
+                "name": "Gedämpfter Fisch",
                 "price_yen": 3000
             },
             {
-                "name": "Dim Sum",
+                "name": "Dim Sum Vegan",
                 "price_yen": 2500
             },
             {
@@ -278,11 +278,11 @@ let restaurants = [
                 "price_yen": 1200
             },
             {
-                "name": "Sakura-Mochi",
+                "name": "Sakura-Mochi-Spezial",
                 "price_yen": 1000
             },
             {
-                "name": "Yuzu-Sorbet",
+                "name": "Yuzu-Sorbet-Dessert",
                 "price_yen": 1100
             }
         ]
@@ -310,15 +310,15 @@ let restaurants = [
                 "price_yen": 3400
             },
             {
-                "name": "Matcha-Eis",
+                "name": "Matcha-Eis-Dessert",
                 "price_yen": 1200
             },
             {
-                "name": "Sakura-Mochi",
+                "name": "Sakura-Mochi-Spezial",
                 "price_yen": 1000
             },
             {
-                "name": "Yuzu-Kuchen",
+                "name": "Yuzu-Kuchen-Dessert",
                 "price_yen": 1400
             },
             {
@@ -330,7 +330,7 @@ let restaurants = [
                 "price_yen": 1500
             },
             {
-                "name": "Miso-Suppe",
+                "name": "Saisonale Miso-Suppe",
                 "price_yen": 800
             }
         ]
@@ -342,7 +342,7 @@ let restaurants = [
         "rating": 4.8,
         "dishes": [
             {
-                "name": "Gegrillter Aal",
+                "name": "Gegrillter Aal mit Sesam",
                 "price_yen": 3800
             },
             {
@@ -362,11 +362,11 @@ let restaurants = [
                 "price_yen": 1500
             },
             {
-                "name": "Sakura-Eis",
+                "name": "Sakura-Eis-Spezial",
                 "price_yen": 1200
             },
             {
-                "name": "Yuzu-Kuchen",
+                "name": "Yuzu-Kuchen-Dessert",
                 "price_yen": 1400
             },
             {
@@ -374,7 +374,7 @@ let restaurants = [
                 "price_yen": 1900
             },
             {
-                "name": "Miso-Suppe",
+                "name": "Saisonale Miso-Suppe",
                 "price_yen": 800
             },
             {
@@ -391,43 +391,43 @@ let restaurants = [
         "dishes": [
             {
                 "name": "Kaiseki Menü (Saison)",
-                "preis_yen": 28000
+                "price_yen": 28000
             },
             {
                 "name": "Gegrillter Aal mit Reis",
-                "preis_yen": 5000
+                "price_yen": 5000
             },
             {
                 "name": "Kobe-Rind Sukiyaki",
-                "preis_yen": 8500
+                "price_yen": 8500
             },
             {
                 "name": "Miso-Suppe mit Yuba",
-                "preis_yen": 1500
+                "price_yen": 1500
             },
             {
-                "name": "Tempura von Meeresfrüchten",
-                "preis_yen": 4000
+                "name": "Tempura von Meeresfrüchte",
+                "price_yen": 4000
             },
             {
                 "name": "Sashimi-Auswahl",
-                "preis_yen": 6000
+                "price_yen": 6000
             },
             {
                 "name": "Gedämpfter Seeteufel",
-                "preis_yen": 3800
+                "price_yen": 3800
             },
             {
                 "name": "Matcha-Dessert",
-                "preis_yen": 1200
+                "price_yen": 1200
             },
             {
-                "name": "Hausgemachter Tofu",
-                "preis_yen": 1000
+                "name": "Hausgemachtr Tofu",
+                "price_yen": 1000
             },
             {
                 "name": "Grüner Tee (Heiß)",
-                "preis_yen": 700
+                "price_yen": 700
             }
         ]
     },
@@ -439,43 +439,43 @@ let restaurants = [
         "dishes": [
             {
                 "name": "Omakase Sushi Menü",
-                "preis_yen": 32000
+                "price_yen": 32000
             },
             {
                 "name": "Toro (fetter Thunfisch)",
-                "preis_yen": 4000
+                "price_yen": 4000
             },
             {
                 "name": "Uni (Seeigel)",
-                "preis_yen": 3500
+                "price_yen": 3500
             },
             {
                 "name": "Ikura (Lachskaviar)",
-                "preis_yen": 2800
+                "price_yen": 2800
             },
             {
                 "name": "Ebi (Garnelen)",
-                "preis_yen": 2200
+                "price_yen": 2200
             },
             {
                 "name": "Anago (Meeraal)",
-                "preis_yen": 2600
+                "price_yen": 2600
             },
             {
                 "name": "Tamago (süßes Omelett)",
-                "preis_yen": 1500
+                "price_yen": 1500
             },
             {
                 "name": "Miso-Suppe mit Muscheln",
-                "preis_yen": 1200
+                "price_yen": 1200
             },
             {
                 "name": "Saba (Makrele)",
-                "preis_yen": 2000
+                "price_yen": 2000
             },
             {
-                "name": "Matcha-Eis",
-                "preis_yen": 900
+                "name": "Matcha-Eis-Dessert",
+                "price_yen": 900
             }
         ]
     }
