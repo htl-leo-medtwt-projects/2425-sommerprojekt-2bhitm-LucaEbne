@@ -1,495 +1,581 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japan Tourguide</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="../js/scrowl-animations.js" defer></script>
+    <script src="../js/main_script.js" defer></script>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Japan Tourguide</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="../js/scrowl-animations.js" defer></script>
-  <script src="../js/main_script.js" defer></script>
-  <link rel="stylesheet" href="../style/style.css" />
-</head>
+  <body>
+    <header id="header2">
+      <img
+        id="cover1"
+        src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg"
+        alt=""
+      />
+      <div class="rectangle"></div>
+      <div class="headerText">
+        <p>Sights in<br />Japan</p>
+      </div>
+      <a href="../index.html"
+        ><img id="HomeButton" src="../img/Home.png" alt=""
+      /></a>
+      <img
+        onclick="ModeSwitchSubPages()"
+        id="LightModeSwitch"
+        src="../img/Moon_Icon.png"
+        alt=""
+      />
+      <div class="navbar">
+        <a href="sights.html" class="active">Sights</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="japanese-basics.html">Japanese Basics</a>
+        <div class="nav-indicator" id="navIndicator"></div>
+      </div>
+    </header>
 
-<body>
-  <header id="header2">
-    <img id="cover2" src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg" alt="" />
-    <div class="rectangle"></div>
-    <div class="headerText">
-      <p>Sights in<br />Japan</p>
-    </div>
-    <a href="../index.html"><img id="HomeButton" src="../img/Home.png" alt="" /></a>
-    <img onclick="ModeSwitchSubPages()" id="LightModeSwitch" src="../img/Moon_Icon.png" alt="" />
-    <div class="navbar">
-      <a href="sights.html" class="active">Sights</a>
-      <a href="restaurants.html">Restaurants</a>
-      <a href="japanese-basics.html">Japanese Basics</a>
-      <div class="nav-indicator" id="navIndicator"></div>
-    </div>
-  </header>
-
-  <div class="container2">
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.5/5</p>
+    <div class="container2">
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.5/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 9:00 to 17:00</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> 500¥ / 3.11€</p>
+          </div>
         </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 9:00 to 17:00</p>
+        <div class="image-container" onclick="showInfo(event)">
+          <img src="../img/Kinkakuji-Tempel.webp" alt="Kinkakuji Tempel" />
+          <div class="info-box" id="infoBox">
+            <h2>Kinkakuji</h2>
+            <p>Ein Tempel, der mit Gold überzogen ist.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
         </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> 500¥ / 3.11€</p>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1743587641573!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHMzYlM2eVFF!2m2!1d35.03936978736039!2d135.7292444073969!3f350.11966236043895!4f-6.39200957607882!5f0.7820865974627469"
+            width="700"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte in Kinkakuji:</strong></p>
+              <ul>
+                <li>Kyōko-chi (Mirror Pond)</li>
+                <li>The Strolling Garden</li>
+                <li>Anmintaku Pond</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/Kinkakuji-Tempel.webp" alt="Kinkakuji Tempel" />
-        <div class="info-box" id="infoBox">
-          <h2>Kinkakuji</h2>
-          <p>Ein Tempel, der mit Gold überzogen ist.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.6/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 24/7</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> Free</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/FamousPlacesSlideshow/FamousPlace3.jpg"
+            alt="Fushimi Inari Taisha"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Fushimi Inari Taisha</h2>
+            <p>Berühmt für seine tausenden roten Torii-Tore.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744223977530!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDQxYnFpUGc.!2m2!1d34.96683802799923!2d135.772125035082!3f176.4378001961493!4f-0.8253379275996764!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte in Fushimi Inari Tarisha:</strong></p>
+              <ul>
+                <li>Senbon Torii (Tausend Tore)</li>
+                <li>Hauptschrein (Honden)</li>
+                <li>Okusha Hohaisho (Hinterer Schrein)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1743587641573!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHMzYlM2eVFF!2m2!1d35.03936978736039!2d135.7292444073969!3f350.11966236043895!4f-6.39200957607882!5f0.7820865974627469"
-          width="700" height="550" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.5/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 9:00 to 23:00</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p>
+              <strong>Admission:</strong> 1500¥ (Main Deck) <br />
+              3500¥ (Both decks) <br />
+              7000¥ (Diamond Tour)
+            </p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg"
+            alt="Tokyo Tower"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Tokyo Tower</h2>
+            <p>Ein ikonischer Funkturm mit Aussichtsplattformen.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224151355!6m8!1m7!1s6e_lUTjTzXVbIgfVT5QGjw!2m2!1d35.65852027579028!2d139.7467690297163!3f274.17557027781277!4f29.89461530796136!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte im/beim Tokyo Tower:</strong></p>
+              <ul>
+                <li>Top Deck (250m)</li>
+                <li>Tokyo Tower FootTown</li>
+                <li>Shiba Park</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte in Kinkakuji:</strong></p>
-            <ul>
-              <li>Kyōko-chi (Mirror Pond)</li>
-              <li>The Strolling Garden</li>
-              <li>Anmintaku Pond</li>
-            </ul>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.5/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 24/7</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> 1000¥ / 6.16€</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/SIghtsOrdner/Bambuswald.jpg"
+            alt="Arashiyama Bambuswald"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Arashiyama</h2>
+            <p>Ein magischer Bambuswald in Kyoto.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224198437!6m8!1m7!1sCAoSLEFGMVFpcE9UeUJQbjBvYUQ1TmUyMHV5ZFFsRzdGb2VKbktIazVPbEUxMVFv!2m2!1d35.01680025300644!2d135.6716102449348!3f264.3812040737591!4f-4.784747421873547!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte im/beim Arashiyama:</strong></p>
+              <ul>
+                <li>Bambuswald (Bamboo Grove)</li>
+                <li>Togetsukyo Brücke (Moon Crossing Bridge)</li>
+                <li>Iwatayama Monkey Park</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.6/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 6:30 to 18:00</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> 300¥ (500¥ to see tresaure hall)</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/SIghtsOrdner/itsukushima.webp"
+            alt="Itsukushima-Schrein"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Itsukushima-Schrein</h2>
+            <p>Berühmt für das „schwimmende“ Torii im Wasser.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224343751!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDRfUC1CSUE.!2m2!1d34.29721819414634!2d132.3183761071033!3f318.3329324811094!4f-1.530050287052589!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte im/beim Itsukushima-Schrein:</strong></p>
+              <ul>
+                <li>Großes Torii (Ōtorii)</li>
+                <li>Hauptschrein</li>
+                <li>Miyajima Wanderwege & Mt. Misen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.6/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 9:00 to 17:00</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> 1050¥ / 6.46€</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/SIghtsOrdner/himeji-castle.jpg"
+            alt="Himeji Castle"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Himeji Castle</h2>
+            <p>
+              Das schönste erhaltene Schloss Japans, auch „Weißer Reiher“
+              genannt.
+            </p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224447800!6m8!1m7!1sCAoSLEFGMVFpcE9vd3dxd0k2N1k4Mi1ieGhzSGM4Nm8yWk9yRzFsdVRNNUQyREpE!2m2!1d34.83860425823377!2d134.6951162370244!3f296.54526659194704!4f8.759527778888852!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte im/beim Himeji-castle:</strong></p>
+              <ul>
+                <li>Hauptburg (Tenshukaku)</li>
+                <li>Hauptschrein</li>
+                <li>Miyajima Wanderwege & Mt. Misen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.2/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 24/7</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> Free</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/SIghtsOrdner/japan-tokyo-shibuya-kreuzung-shibuya-sky-nachts.jpg"
+            alt="Shibuya Kreuzung"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Shibuya Kreuzung</h2>
+            <p>Eine der berühmtesten Kreuzungen der Welt in Tokio.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224479786!6m8!1m7!1sBjxxXCW_Jopr2eDE8fsQjQ!2m2!1d35.65950549610064!2d139.7006044627257!3f344.7137237978684!4f-11.856317628776338!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte bei der Shibuya Kreuzung:</strong></p>
+              <ul>
+                <li>Shibuya Sky</li>
+                <li>Center Gai (センター街)</li>
+                <li>Miyashita Park</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.5/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 24/7</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> Free</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img src="../img/SIghtsOrdner/naran-park.jpg" alt="Nara Park" />
+          <div class="info-box" id="infoBox">
+            <h2>Nara Park</h2>
+            <p>
+              Ein Park mit frei herumlaufenden Rehen und historischen Tempeln.
+            </p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224507941!6m8!1m7!1sCAoSLEFGMVFpcE1vRGx4VDFPakgxT3g3alh3andzWWYybDlVTUhTNS1BTVpHYTg1!2m2!1d34.6850470072559!2d135.8430119852308!3f227.5560415108908!4f4.771013516145459!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte im Nara Park:</strong></p>
+              <ul>
+                <li>Tōdai-ji Temple (東大寺)</li>
+                <li>Nara Deer Park</li>
+                <li>Nigatsudō Hall</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.6/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 24/7</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> 3000¥ / 18.47€</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img
+            src="../img/FamousPlacesSlideshow/Mount-Fuji.jpg"
+            alt="Mount Fuji"
+          />
+          <div class="info-box" id="infoBox">
+            <h2>Mount Fuji</h2>
+            <p>Japans höchster Berg und Symbol des Landes.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224694038!6m8!1m7!1sQKprnD2VcdT_tG7TEsPAiQ!2m2!1d35.3408785412861!2d138.7375820859215!3f152.42190949991914!4f2.3221920048773086!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte beim Mount Fuji:</strong></p>
+              <ul>
+                <li>Chureito Pagode(Fujiyoshida)</li>
+                <li>Kawaguchiko See (河口湖)</li>
+                <li>Fuji-Q Highland</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sight-row">
+        <div id="rating">
+          <div class="flexDesignRating">
+            <img src="../img/star.png" alt="Star" />
+            <p><strong>Rating:</strong> 4.4/5</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/Clock.png" alt="Clock" />
+            <p><strong>Open:</strong> 9:00 to 17:00</p>
+          </div>
+          <div class="flexDesignRating">
+            <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
+            <p><strong>Admission:</strong> 1200¥ / 7.39€</p>
+          </div>
+        </div>
+        <div class="image-container" onclick="showInfo(event)">
+          <img src="../img/SIghtsOrdner/oaska-castle.jpg" alt="Osaka Castle" />
+          <div class="info-box" id="infoBox">
+            <h2>Osaka Castle</h2>
+            <p>Ein prachtvolles Schloss mit reicher Geschichte in Osaka.</p>
+            <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
+            <div id="MapsClose" onclick="closeMap(event)">Back</div>
+            <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
+          </div>
+        </div>
+        <div class="map-container" id="mapContainer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1744224550511!6m8!1m7!1soHjk8Qi0nYcPPiC0D886EQ!2m2!1d34.68657956033722!2d135.5258684720209!3f351.44047229618644!4f-1.8865372289060076!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div id="mustSeePlace">
+          <div class="flexDesignRating">
+            <img src="../img/map.webp" alt="Map of Kinkakuji" />
+            <div class="mustSeeText">
+              <p><strong>Must See Orte beim Osaka Castle:</strong></p>
+              <ul>
+                <li>Osaka Castle Park (大阪城公園)</li>
+                <li>Hōkoku-Schrein (豊國神社)</li>
+                <li>River Cruise – Aqua Liner</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.6/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 24/7</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> Free</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/FamousPlacesSlideshow/FamousPlace3.jpg" alt="Fushimi Inari Taisha" />
-        <div class="info-box" id="infoBox">
-          <h2>Fushimi Inari Taisha</h2>
-          <p>Berühmt für seine tausenden roten Torii-Tore.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744223977530!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDQxYnFpUGc.!2m2!1d34.96683802799923!2d135.772125035082!3f176.4378001961493!4f-0.8253379275996764!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte in Fushimi Inari Tarisha:</strong></p>
-            <ul>
-              <li>Senbon Torii (Tausend Tore)</li>
-              <li>Hauptschrein (Honden)</li>
-              <li>Okusha Hohaisho (Hinterer Schrein)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.5/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 9:00 to 23:00</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p>
-            <strong>Admission:</strong> 1500¥ (Main Deck) <br />
-            3500¥ (Both decks) <br />
-            7000¥ (Diamond Tour)
-          </p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/TokyoSkylineHeader.jpg" alt="Tokyo Tower" />
-        <div class="info-box" id="infoBox">
-          <h2>Tokyo Tower</h2>
-          <p>Ein ikonischer Funkturm mit Aussichtsplattformen.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224151355!6m8!1m7!1s6e_lUTjTzXVbIgfVT5QGjw!2m2!1d35.65852027579028!2d139.7467690297163!3f274.17557027781277!4f29.89461530796136!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte im/beim Tokyo Tower:</strong></p>
-            <ul>
-              <li>Top Deck (250m)</li>
-              <li>Tokyo Tower FootTown</li>
-              <li>Shiba Park</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.5/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 24/7</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> 1000¥ / 6.16€</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/Bambuswald.jpg" alt="Arashiyama Bambuswald" />
-        <div class="info-box" id="infoBox">
-          <h2>Arashiyama</h2>
-          <p>Ein magischer Bambuswald in Kyoto.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224198437!6m8!1m7!1sCAoSLEFGMVFpcE9UeUJQbjBvYUQ1TmUyMHV5ZFFsRzdGb2VKbktIazVPbEUxMVFv!2m2!1d35.01680025300644!2d135.6716102449348!3f264.3812040737591!4f-4.784747421873547!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte im/beim Arashiyama:</strong></p>
-            <ul>
-              <li>Bambuswald (Bamboo Grove)</li>
-              <li>Togetsukyo Brücke (Moon Crossing Bridge)</li>
-              <li>Iwatayama Monkey Park</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.6/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 6:30 to 18:00</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> 300¥ (500¥ to see tresaure hall)</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/itsukushima.webp" alt="Itsukushima-Schrein" />
-        <div class="info-box" id="infoBox">
-          <h2>Itsukushima-Schrein</h2>
-          <p>Berühmt für das „schwimmende“ Torii im Wasser.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224343751!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDRfUC1CSUE.!2m2!1d34.29721819414634!2d132.3183761071033!3f318.3329324811094!4f-1.530050287052589!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte im/beim Itsukushima-Schrein:</strong></p>
-            <ul>
-              <li>Großes Torii (Ōtorii)</li>
-              <li>Hauptschrein</li>
-              <li>Miyajima Wanderwege & Mt. Misen</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.6/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 9:00 to 17:00</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> 1050¥ / 6.46€</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/himeji-castle.jpg" alt="Himeji Castle" />
-        <div class="info-box" id="infoBox">
-          <h2>Himeji Castle</h2>
-          <p>
-            Das schönste erhaltene Schloss Japans, auch „Weißer Reiher“
-            genannt.
-          </p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224447800!6m8!1m7!1sCAoSLEFGMVFpcE9vd3dxd0k2N1k4Mi1ieGhzSGM4Nm8yWk9yRzFsdVRNNUQyREpE!2m2!1d34.83860425823377!2d134.6951162370244!3f296.54526659194704!4f8.759527778888852!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte im/beim Himeji-castle:</strong></p>
-            <ul>
-              <li>Hauptburg (Tenshukaku)</li>
-              <li>Hauptschrein</li>
-              <li>Miyajima Wanderwege & Mt. Misen</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.2/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 24/7</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> Free</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/japan-tokyo-shibuya-kreuzung-shibuya-sky-nachts.jpg" alt="Shibuya Kreuzung" />
-        <div class="info-box" id="infoBox">
-          <h2>Shibuya Kreuzung</h2>
-          <p>Eine der berühmtesten Kreuzungen der Welt in Tokio.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224479786!6m8!1m7!1sBjxxXCW_Jopr2eDE8fsQjQ!2m2!1d35.65950549610064!2d139.7006044627257!3f344.7137237978684!4f-11.856317628776338!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte bei der Shibuya Kreuzung:</strong></p>
-            <ul>
-              <li>Shibuya Sky</li>
-              <li>Center Gai (センター街)</li>
-              <li>Miyashita Park</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.5/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 24/7</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> Free</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/naran-park.jpg" alt="Nara Park" />
-        <div class="info-box" id="infoBox">
-          <h2>Nara Park</h2>
-          <p>
-            Ein Park mit frei herumlaufenden Rehen und historischen Tempeln.
-          </p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224507941!6m8!1m7!1sCAoSLEFGMVFpcE1vRGx4VDFPakgxT3g3alh3andzWWYybDlVTUhTNS1BTVpHYTg1!2m2!1d34.6850470072559!2d135.8430119852308!3f227.5560415108908!4f4.771013516145459!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte im Nara Park:</strong></p>
-            <ul>
-              <li>Tōdai-ji Temple (東大寺)</li>
-              <li>Nara Deer Park</li>
-              <li>Nigatsudō Hall</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.6/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 24/7</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> 3000¥ / 18.47€</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/FamousPlacesSlideshow/Mount-Fuji.jpg" alt="Mount Fuji" />
-        <div class="info-box" id="infoBox">
-          <h2>Mount Fuji</h2>
-          <p>Japans höchster Berg und Symbol des Landes.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224694038!6m8!1m7!1sQKprnD2VcdT_tG7TEsPAiQ!2m2!1d35.3408785412861!2d138.7375820859215!3f152.42190949991914!4f2.3221920048773086!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte beim Mount Fuji:</strong></p>
-            <ul>
-              <li>Chureito Pagode(Fujiyoshida)</li>
-              <li>Kawaguchiko See (河口湖)</li>
-              <li>Fuji-Q Highland</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sight-row">
-      <div id="rating">
-        <div class="flexDesignRating">
-          <img src="../img/star.png" alt="Star" />
-          <p><strong>Rating:</strong> 4.4/5</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/Clock.png" alt="Clock" />
-          <p><strong>Open:</strong> 9:00 to 17:00</p>
-        </div>
-        <div class="flexDesignRating">
-          <img src="../img/yen-rechnung-zur-hand.png" alt="Price" />
-          <p><strong>Admission:</strong> 1200¥ / 7.39€</p>
-        </div>
-      </div>
-      <div class="image-container" onclick="showInfo(event)">
-        <img src="../img/SIghtsOrdner/oaska-castle.jpg" alt="Osaka Castle" />
-        <div class="info-box" id="infoBox">
-          <h2>Osaka Castle</h2>
-          <p>Ein prachtvolles Schloss mit reicher Geschichte in Osaka.</p>
-          <div id="MapsOpen" onclick="showMap(event)">Open in Maps</div>
-          <div id="MapsClose" onclick="closeMap(event)">Back</div>
-          <div id="MapsClose2" onclick="closeMap2(event)">Back</div>
-        </div>
-      </div>
-      <div class="map-container" id="mapContainer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1744224550511!6m8!1m7!1soHjk8Qi0nYcPPiC0D886EQ!2m2!1d34.68657956033722!2d135.5258684720209!3f351.44047229618644!4f-1.8865372289060076!5f0.7820865974627469"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div id="mustSeePlace">
-        <div class="flexDesignRating">
-          <img src="../img/map.webp" alt="Map of Kinkakuji">
-          <div class="mustSeeText">
-            <p><strong>Must See Orte beim Osaka Castle:</strong></p>
-            <ul>
-              <li>Osaka Castle Park (大阪城公園)</li>
-              <li>Hōkoku-Schrein (豊國神社)</li>
-              <li>River Cruise – Aqua Liner</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

@@ -514,7 +514,7 @@ body {
   background-color: #ffd6ea;
   transform: scale(1.02);
 }
-#endScreen{
+#endScreen {
   font-size: 3em;
   color: #d47593;
 }
@@ -542,7 +542,7 @@ body {
   margin: 1em 0;
   transition: 0.3s;
 }
-#text-input{
+#text-input {
   padding: 10px;
   font-size: 1em;
   width: 100%;
@@ -561,12 +561,8 @@ body {
   outline: none;
 }
 
-
-
-
-
 /* Restaurant Seite */
-.dishName{
+.dishName {
   position: absolute;
   width: 100%;
   max-width: 100%;
@@ -576,11 +572,11 @@ body {
   font-weight: 2000;
   border-bottom: 1px solid white;
 }
-.dishPrice{
+.dishPrice {
   position: absolute;
   top: 35%;
   color: white;
-  font-weight:1500;
+  font-weight: 1500;
   font-size: 1em;
   left: 0.3em;
 }
@@ -593,7 +589,6 @@ body {
     transform: perspective(800px) rotateY(0deg);
   }
 }
-
 
 .card-3d {
   position: relative;
@@ -608,7 +603,7 @@ body {
 .card-3d div {
   position: absolute;
   width: 80px;
-  height: 112px;
+  height: 122px;
   border-radius: 0.5rem;
   top: 50%;
   left: 50%;
@@ -616,7 +611,7 @@ body {
   transition-duration: 200ms;
   will-change: transform, filter;
 }
-.rect{
+.rect {
   position: absolute;
   width: 80px;
   height: 112px;
@@ -686,14 +681,12 @@ body {
   transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
   animation-delay: -18s;
 }
-.imgFood{
+.imgFood {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.6em;
 }
-
-
 
 #arrow-left2,
 #arrow-right2 {
@@ -715,8 +708,20 @@ body {
   top: -40%;
   left: 85%;
 }
-#main-Content{
+#main-Content {
+  justify-content: center;
   display: flex;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  border-radius: 1.25em;
+  width: 88%;
+  gap: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  padding: 3%;
+}
+#body-Restaurant {
+  background: linear-gradient(to bottom, #fff1f9, #ffffff);
 }
 
 .slideShowRestaurantCover {
@@ -759,9 +764,18 @@ body {
   background-color: white;
   padding: 1em;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-size: 1.1em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
   max-width: 200px;
   min-width: 150px;
   color: #333;
+}
+#rightSide {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  padding: 4%;
+  border-radius: 1.25em;
+  margin-top: auto;
+  margin-bottom: auto;
 }
