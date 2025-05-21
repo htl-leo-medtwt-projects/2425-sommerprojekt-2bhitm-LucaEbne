@@ -692,7 +692,7 @@ body {
 #arrow-right2 {
   font-size: 4em;
   color: white;
-  position: relative;
+  position: absolute;
   background: none;
   border: none;
   cursor: pointer;
@@ -700,13 +700,13 @@ body {
 }
 
 #arrow-left2 {
-  top: 40%;
-  left: 2%;
+  top: 90%;
+  left: 7%;
 }
 
 #arrow-right2 {
-  top: -40%;
-  left: 85%;
+  top: 89.6%;
+  left: 35%;
 }
 #main-Content {
   justify-content: center;
@@ -750,7 +750,11 @@ body {
   font-family: cursive;
   text-align: center;
 }
-
+.container-restaurant {
+  background-color: #e8c4b2;
+  padding: 2% 2% 4% 2%;
+  border-radius: 1.25em;
+}
 .container-restaurant2 {
   display: flex;
   justify-content: center;
@@ -761,14 +765,13 @@ body {
 }
 
 #description {
-  background-color: white;
   padding: 1em;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-size: 1.5em;
   max-width: 200px;
   min-width: 150px;
-  color: #333;
+  color: #5a3c30;
 }
 #rightSide {
   display: flex;
@@ -778,4 +781,96 @@ body {
   border-radius: 1.25em;
   margin-top: auto;
   margin-bottom: auto;
+  background-color: #fff8e9;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  #header1,
+  #header2 {
+    height: auto;
+  }
+
+  .headerText {
+    font-size: 2em;
+    top: 55%;
+    left: 10%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  #cover,
+  #cover1 {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .navbar {
+    margin-top: 1em;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .navbar a {
+    font-size: 1.6em;
+  }
+
+  #LightModeSwitch {
+    width: 40px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+  }
+
+  #HomeButton {
+    width: 40px;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 600px) {
+  #header1,
+  #header2 {
+    height: auto;
+  }
+
+  .headerText {
+    font-size: 1.7em;
+    top: 55%;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  #cover,
+  #cover1 {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .navbar {
+    margin-top: 1em;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .navbar a {
+    font-size: 1em;
+  }
+
+  #LightModeSwitch {
+    width: 30px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+  }
+
+  #HomeButton {
+    width: 30px;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+  }
 }
