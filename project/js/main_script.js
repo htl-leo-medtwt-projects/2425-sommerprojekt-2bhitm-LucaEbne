@@ -121,7 +121,8 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--nav-text-color", "white");
     root.style.setProperty("--card-bg-color", "#fff");
     root.style.setProperty("--card-text-color", "#d13b6b");
-    root.style.setProperty("--rating-background-color", "#fff")
+    root.style.setProperty("--rating-background-color", "#fff");
+    root.style.setProperty("--box-shadow", "0 0.5em 0.75em rgba(255, 0, 221, 0.1)");
     darkMode = false;
 
     const rectangle = document.querySelector(".rectangle2");
@@ -131,22 +132,22 @@ function ModeSwitchSubPages() {
 
     lightModeIcon.src = "../img/Moon_Icon.png";
   } else {
-    root.style.setProperty("--nav-text-color", "#a7a6a4");
-    root.style.setProperty("--background-color", "#2c2c2c");
-    root.style.setProperty("--card-bg-color", "#1d1d1d");
-    root.style.setProperty("--card-text-color", "#7f5e6c");
-    root.style.setProperty("--rating-background-color", "#7f5e6c")
-
+    root.style.setProperty("--background-color", "#1b1b1b");
+    root.style.setProperty("--nav-text-color", "#cccccc");
+    root.style.setProperty("--card-bg-color", "#2a2a2a");
+    root.style.setProperty("--card-text-color", "#e18bb1");
+    root.style.setProperty("--rating-background-color", "#2f2f2f");
+    root.style.setProperty("--box-shadow", "0 0.5em 0.75em rgba(255, 182, 193, 0.2)");
+    darkMode = true;
 
     const rectangle = document.createElement("div");
     rectangle.classList.add("rectangle2");
     headerBoxSubpages.appendChild(rectangle);
 
-    darkMode = true;
-
     lightModeIcon.src = "../img/Sun.png";
   }
 }
+
 function moveIndicator(el) {
   let indicator = document.getElementById("navIndicator");
   let left = el.offsetLeft;
