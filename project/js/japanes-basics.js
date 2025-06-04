@@ -64,6 +64,28 @@ let vocabQuestionsK3 = [
     answer: "watashi no namae",
   },
 ];
+let vocabQuestionsK4 = [
+  {
+    question: "Was heißt 'rot' auf Japanisch?",
+    options: ["aka", "ao", "shiro", "kuro"],
+    answer: "aka",
+  },
+  {
+    question: "Was heißt 'blau' auf Japanisch?",
+    options: ["midori", "aka", "ao", "kiiro"],
+    answer: "ao",
+  },
+  {
+    question: "Was heißt 'weiß' auf Japanisch?",
+    options: ["kuro", "shiro", "aka", "cha"],
+    answer: "shiro",
+  },
+  {
+    question: "Was heißt 'schwarz' auf Japanisch?",
+    options: ["kuro", "shiro", "aka", "kiiro"],
+    answer: "kuro",
+  },
+];
 
 let textQuestions1 = [
   { question: "Ich trinke gerne ___ (Wasser).", answer: "mizu" },
@@ -83,7 +105,12 @@ let textQuestion3 = [
   { question: "___ (Danke) für das Geschenk.", answer: "arigato" },
   { question: "___ (Mein Name) ist Tobias.", answer: "watashi no namae" },
 ];
-
+let textQuestions4 = [
+  { question: "Der Apfel ist ___ (rot).", answer: "aka" },
+  { question: "Der Himmel ist ___ (blau).", answer: "ao" },
+  { question: "Der Schnee ist ___ (weiß).", answer: "shiro" },
+  { question: "Die Nacht ist ___ (schwarz).", answer: "kuro" },
+];
 
 let audioQuestions1 = [
   {
@@ -151,6 +178,28 @@ let audioQuestions3 = [
     answer: "mein name",
   },
 ];
+let audioQuestions4 = [
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/rot.mp3",
+    answer: "rot",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/blau.mp3",
+    answer: "blau",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/weiß.mp3",
+    answer: "weiß",
+  },
+  {
+    question: "Was heißt ... auf Deutsch?",
+    audio: "../audio/schwarz.mp3",
+    answer: "schwarz",
+  },
+];
 
 let quizType = "";
 let currentQuiz = [];
@@ -187,20 +236,30 @@ function startQuizWithCategory(category) {
         document.getElementById("K1").style.backgroundColor = "rgb(235, 171, 249)";
         document.getElementById("K2").style.backgroundColor = "#fdf6ff";
         document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = vocabQuestionsK1;
         break;
       case 2:
         document.getElementById("K1").style.backgroundColor = "#fdf6ff";
         document.getElementById("K2").style.backgroundColor = "rgb(235, 171, 249)";
         document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = vocabQuestionsK2;
         break;
       case 3:
-      default:
         document.getElementById("K1").style.backgroundColor = "#fdf6ff";
         document.getElementById("K2").style.backgroundColor = "#fdf6ff";
         document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = vocabQuestionsK3;
+        break;
+      case 4:  
+      default:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "rgb(235, 171, 249)";
+        currentQuiz = vocabQuestionsK4;
         break;
     }
 
@@ -213,20 +272,30 @@ function startQuizWithCategory(category) {
         document.getElementById("K1").style.backgroundColor = "rgb(235, 171, 249)";
         document.getElementById("K2").style.backgroundColor = "#fdf6ff";
         document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = textQuestions1;
         break;
       case 2:
         document.getElementById("K1").style.backgroundColor = "#fdf6ff";
         document.getElementById("K2").style.backgroundColor = "rgb(235, 171, 249)";
         document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = textQuestion2;
         break;
       case 3:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)"
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
+        currentQuiz = textQuestion3;
+        break;
+      case 4:
       default:
         document.getElementById("K1").style.backgroundColor = "#fdf6ff";
         document.getElementById("K2").style.backgroundColor = "#fdf6ff";
-        document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)";
-        currentQuiz = textQuestion3;
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "rgb(235, 171, 249)";
+        currentQuiz = textQuestions4;
         break;
     }
   } else if (quizType === "audio") {
@@ -238,20 +307,30 @@ function startQuizWithCategory(category) {
         document.getElementById("K1").style.backgroundColor = "rgb(235, 171, 249)";
         document.getElementById("K2").style.backgroundColor = "#fdf6ff";
         document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = audioQuestions1;
         break;
       case 2:
         document.getElementById("K1").style.backgroundColor = "#fdf6ff";
         document.getElementById("K2").style.backgroundColor = "rgb(235, 171, 249)";
         document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = audioQuestions2;
         break;
       case 3:
-      default:
         document.getElementById("K1").style.backgroundColor = "#fdf6ff";
         document.getElementById("K2").style.backgroundColor = "#fdf6ff";
         document.getElementById("K3").style.backgroundColor = "rgb(235, 171, 249)";
+        document.getElementById("K4").style.backgroundColor = "#fdf6ff";
         currentQuiz = audioQuestions3;
+        break;
+      case 4:
+      default:
+        document.getElementById("K1").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K2").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K3").style.backgroundColor = "#fdf6ff";
+        document.getElementById("K4").style.backgroundColor = "rgb(235, 171, 249)";
+        currentQuiz = audioQuestions4;
         break;
     }
   }

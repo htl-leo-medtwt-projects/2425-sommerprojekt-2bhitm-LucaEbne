@@ -5,6 +5,9 @@
   --card-text-color: #d13b6b;
   --box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
   --rating-background-color: #fff;
+  --special-bg: #fff8e9; 
+  --quiz-bg: #ffffff;
+  --rating-text-color: #000000;
 }
 
 @font-face {
@@ -393,7 +396,7 @@ body {
   font-size: 1.1em;
   font-weight: bold;
   margin: 0;
-  color: #000000;
+  color: var(--rating-text-color);
 }
 
 .mustSeeText ul {
@@ -405,7 +408,7 @@ body {
   list-style: none;
   margin-bottom: 0.4em;
   font-size: 1em;
-  color: #000000;
+  color: var(--rating-text-color);
   position: relative;
   padding-left: 0.5em;
 }
@@ -421,6 +424,9 @@ body {
   background-color: var(--rating-background-color);
   margin: 1%;
 }
+.flexDesignRating p{
+  color: var(--rating-text-color);
+}
 
 .flexDesignRating img {
   width: 1.9em;
@@ -430,7 +436,7 @@ body {
 
 /* Japanese Basic Seite */
 #body-Basics {
-  background: linear-gradient(to bottom, #fff1f9, #ffffff);
+background: linear-gradient(to bottom, var(--special-bg), #ffffff);
 }
 
 #game-container {
@@ -743,7 +749,7 @@ body {
   padding: 3%;
 }
 #body-Restaurant {
-  background: linear-gradient(to bottom, #fff1f9, #ffffff);
+background: linear-gradient(to bottom, var(--special-bg), #ffffff);
 }
 
 .slideShowRestaurantCover {
@@ -773,7 +779,7 @@ body {
   text-align: center;
 }
 .container-restaurant {
-  background-color: #e8c4b2;
+  background-color: var(--special-bg);
   padding: 2% 2% 4% 2%;
   border-radius: 1.25em;
 }
@@ -933,6 +939,7 @@ body {
     padding: 1.25em;
   }
   #game-container {
+    background-color: var(--quiz-bg);
     gap: 3em;
   }
 }

@@ -123,6 +123,9 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--card-text-color", "#d13b6b");
     root.style.setProperty("--rating-background-color", "#fff");
     root.style.setProperty("--box-shadow", "0 0.5em 0.75em rgba(255, 0, 221, 0.1)");
+    root.style.setProperty("--special-bg", "#fff8e9");
+    root.style.setProperty("--quiz-bg", "#ffffff");
+    root.style.setProperty("--rating-text-color", "#000000");
     darkMode = false;
 
     const rectangle = document.querySelector(".rectangle2");
@@ -136,12 +139,17 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--nav-text-color", "#cccccc");
     root.style.setProperty("--card-bg-color", "#2a2a2a");
     root.style.setProperty("--card-text-color", "#e18bb1");
-    root.style.setProperty("--rating-background-color", "#2f2f2f");
+    root.style.setProperty("--rating-background-color", "#444040");
     root.style.setProperty("--box-shadow", "0 0.5em 0.75em rgba(255, 182, 193, 0.2)");
+    root.style.setProperty("--special-bg", "#232323");
+    root.style.setProperty("--quiz-bg", "#232323");
+    root.style.setProperty("--rating-text-color", "#8E576F");
     darkMode = true;
 
     const rectangle = document.createElement("div");
     rectangle.classList.add("rectangle2");
+    let sight = document.getElementsByName("testBox");
+    sight.appendChild(rectangle);
     headerBoxSubpages.appendChild(rectangle);
 
     lightModeIcon.src = "../img/Sun.png";
