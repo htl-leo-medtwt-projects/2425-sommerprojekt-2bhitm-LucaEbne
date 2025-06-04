@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", () => {
+  let savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "true") {
+    darkMode = false;
+    if (document.body.id === "body-Restaurant" || document.body.id === "body-Basics") {
+      ModeSwitchSubPages();
+    } else {
+      ModeSwitchMain();
+    }
+  }
+});
 const sightRows = document.querySelectorAll(".sight-row");
 sightRows.forEach((element) => {
   generateScrollAnimation(element);
@@ -90,7 +101,8 @@ function ModeSwitchMain() {
     root.style.setProperty("--nav-text-color", "white");
     root.style.setProperty("--card-bg-color", "#fff");
     root.style.setProperty("--card-text-color", "#d13b6b");
-    darkMode = false;
+     darkMode = false;
+    localStorage.setItem("darkMode", "false");
 
     const rectangle = document.querySelector(".rectangle2");
     if (rectangle) {
@@ -109,6 +121,7 @@ function ModeSwitchMain() {
     headerBox.appendChild(rectangle);
 
     darkMode = true;
+    localStorage.setItem("darkMode", "true");
 
     lightModeIcon.src = "img/Sun.png";
   }
@@ -124,16 +137,19 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--rating-background-color", "#fff");
     root.style.setProperty("--box-shadow", "0 0.5em 0.75em rgba(255, 0, 221, 0.1)");
     root.style.setProperty("--special-bg", "#fff8e9");
+    root.style.setProperty("--spezial2-bg", "#fff8e9");
+    root.style.setProperty("--restaurant-text-color", "#5a3c30");
     root.style.setProperty("--quiz-bg", "#ffffff");
     root.style.setProperty("--rating-text-color", "#000000");
     darkMode = false;
-
     const rectangle = document.querySelector(".rectangle2");
     if (rectangle) {
       rectangle.remove();
     }
 
     lightModeIcon.src = "../img/Moon_Icon.png";
+
+    localStorage.setItem("darkMode", "false");    
   } else {
     root.style.setProperty("--background-color", "#1b1b1b");
     root.style.setProperty("--nav-text-color", "#cccccc");
@@ -141,18 +157,18 @@ function ModeSwitchSubPages() {
     root.style.setProperty("--card-text-color", "#e18bb1");
     root.style.setProperty("--rating-background-color", "#444040");
     root.style.setProperty("--box-shadow", "0 0.5em 0.75em rgba(255, 182, 193, 0.2)");
-    root.style.setProperty("--special-bg", "#232323");
+    root.style.setProperty("--special-bg", "#2a2a2a");
+    root.style.setProperty("--spezial2-bg", "#444040");
+    root.style.setProperty("--restaurant-text-color", "#d8b4a0");
     root.style.setProperty("--quiz-bg", "#232323");
     root.style.setProperty("--rating-text-color", "#8E576F");
     darkMode = true;
-
     const rectangle = document.createElement("div");
     rectangle.classList.add("rectangle2");
-    let sight = document.getElementsByName("testBox");
-    sight.appendChild(rectangle);
     headerBoxSubpages.appendChild(rectangle);
 
     lightModeIcon.src = "../img/Sun.png";
+    localStorage.setItem("darkMode", "true");
   }
 }
 

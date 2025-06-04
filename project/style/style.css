@@ -6,6 +6,8 @@
   --box-shadow: 0 0.5em 0.75em rgba(255, 0, 221, 0.1);
   --rating-background-color: #fff;
   --special-bg: #fff8e9; 
+  --spezial2-bg: #fff8e9;
+  --restaurant-text-color: #5a3c30;
   --quiz-bg: #ffffff;
   --rating-text-color: #000000;
 }
@@ -436,13 +438,13 @@ body {
 
 /* Japanese Basic Seite */
 #body-Basics {
-background: linear-gradient(to bottom, var(--special-bg), #ffffff);
+background-color: var(--background-color);
 }
 
 #game-container {
   display: flex;
   gap: 10.5em;
-  background-color: white;
+  background-color: var(--card-bg-color);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -459,6 +461,7 @@ background: linear-gradient(to bottom, var(--special-bg), #ffffff);
   max-width: 50em;
   border-radius: 1.25em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  background-color: var(--quiz-bg);
 }
 
 .quiz-mode-selector {
@@ -490,6 +493,7 @@ background: linear-gradient(to bottom, var(--special-bg), #ffffff);
   text-align: center;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   padding: 2.1em;
+  background-color: var(--quiz-bg);
 }
 
 .quiz-category-box {
@@ -522,6 +526,7 @@ background: linear-gradient(to bottom, var(--special-bg), #ffffff);
 #quiz-question {
   font-size: 1.5em;
   margin-bottom: 1.25em;
+  color: var(--card-text-color);
 }
 
 .quiz-option-box {
@@ -749,7 +754,7 @@ background: linear-gradient(to bottom, var(--special-bg), #ffffff);
   padding: 3%;
 }
 #body-Restaurant {
-background: linear-gradient(to bottom, var(--special-bg), #ffffff);
+background-color:var(--background-color);
 }
 
 .slideShowRestaurantCover {
@@ -799,7 +804,8 @@ background: linear-gradient(to bottom, var(--special-bg), #ffffff);
   font-size: 1.5em;
   max-width: 200px;
   min-width: 150px;
-  color: #5a3c30;
+  color: var(--restaurant-text-color);
+  background-color: var(--spezial2-bg);
 }
 #rightSide {
   display: flex;
@@ -809,7 +815,7 @@ background: linear-gradient(to bottom, var(--special-bg), #ffffff);
   border-radius: 1.25em;
   margin-top: auto;
   margin-bottom: auto;
-  background-color: #fff8e9;
+  background-color: var(--special-bg);
 }
 
 /* Responsive Design */
